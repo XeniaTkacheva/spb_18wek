@@ -1,0 +1,62 @@
+.main-nav {
+  // display: block;
+  display: flex;
+  // flex-direction: column-reverse;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  // outline: 1px solid blue;
+  padding: 25px;
+}
+
+// .main-nav__toggle {
+//   display: none;
+//   position: absolute;
+//   top: 21px;
+//   right: 31px;
+//   border: none;
+//   width: 20px;
+//   height: 35px;
+//   background: $white url("../img/icon-menu-open.svg") no-repeat 50% 50%;
+// }
+
+// .main-nav__toggle--off {
+//   display: none;
+// }
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    margin-right: 306px;
+
+  }
+
+  .main-nav__list {
+
+  }
+
+  // .main-nav__toggle {
+  //   display: none;
+  // }
+}
+@media (min-width: $laptop-width) {
+    .main-nav {
+    margin-right: 440px;
+    padding-top: 53px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 208px;
+    flex-shrink: 0;
+    margin-right: 0;
+    min-height: 651px;
+    padding: 28px 0 47px;
+
+  }
+
+  .main-nav__list {
+    display: block;
+  }
+}

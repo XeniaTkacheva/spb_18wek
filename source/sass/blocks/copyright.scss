@@ -1,0 +1,45 @@
+.copyright__text {
+  margin: 0;
+  display: block;
+
+  font-size: 9px;
+  line-height: 11px;
+  font-weight: 400;
+  color: $color-sun;
+  text-align: center;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link {
+  display: none;
+  text-decoration: none;
+  font-size: 9px;
+  color: $color-sun;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__text {
+    margin-right: 30px;
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    display: block;
+    position: relative;
+  }
+
+  .copyright__link {
+    position: absolute;
+    bottom: 41px;
+    right: -60px;
+    display: block;
+    font-size: 9px;
+    transform: rotate(-90deg);
+  }
+}

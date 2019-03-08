@@ -1,0 +1,30 @@
+.paragraph {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+
+}
+
+@media (min-width: $laptop-width) {
+
+}
+
+@media (min-width: $desktop-width) {
+  .paragraph {
+    margin: 0;
+    display: block;
+    box-sizing: border-box;
+    font-family: Playfair Display;
+    font-weight: 900;
+    line-height: 43px;
+    font-size: 36px;
+    letter-spacing: 0.05em;
+    color: $color-sun;
+
+    width: 190px;
+    flex-shrink: 0;
+    padding: 0 0 18px 13px;
+
+  }
+}

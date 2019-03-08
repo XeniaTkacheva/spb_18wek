@@ -1,0 +1,32 @@
+.slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $grey;
+  &--current {
+    background-color: $color-sun;
+  }
+}
+
+@media (min-width: $laptop-width) {
+  .slider__item {
+    width: 12px;
+    height: 12px;
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    display: none;
+  }
+}
+
+

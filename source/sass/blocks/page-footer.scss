@@ -1,0 +1,115 @@
+.page-footer {
+  min-height: 528px;
+  background-color: rgba($reddish-dark, 0.4);
+  background-image: linear-gradient(to top, rgba($reddish-dark, 0.8), rgba($reddish-dark, 0.8)),
+    url(../img/bg-footer-laptop@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.page-footer__wrapper {
+  min-width: 320px;
+  box-sizing: border-box;
+  padding: 48px 0 0 0;
+  margin-bottom: 50px;
+}
+
+.page-footer__container {
+  margin-bottom: 35px;
+}
+
+.page-footer__logo {
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  font-family: Playfair Display;
+  font-weight: 900;
+  line-height: 29px;
+  font-size: 24px;
+  text-align: center;
+  color: $white;
+  margin-bottom: 37px;
+}
+
+.page-footer__nav {
+  display: block;
+}
+
+.page-footer__copyright {
+  display: block;
+  box-sizing: border-box;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    background-image: linear-gradient(to top, rgba($reddish-dark, 0.8), rgba($reddish-dark, 0.8)),
+      url(../img/bg-footer-laptop@1x.jpg);
+    // background-size: 1097px 691px;
+    // background-size: 100% auto;
+    background-position: 50% 50%;
+  }
+
+  .page-footer__wrapper {
+    margin: 0 auto;
+  }
+
+  .page-footer__logo {
+    padding: 0;
+    display: block;
+  }
+
+  .page-footer__copyright {
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: $laptop-width) {
+  .page-footer__logo {
+    margin-bottom: 41px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    min-height: 341px;
+    background-image: linear-gradient(to top, rgba($reddish-dark, 0.8), rgba($reddish-dark, 0.8)),
+      url(../img/bg-footer-desktop@1x.jpg);
+    // background-size: 1097px 691px;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+  }
+  .page-footer__wrapper {
+    position: relative;
+    padding: 134px 30px 45px 5px;
+    max-width: 1170px;
+    margin: 0 auto;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 25%;
+      left: 11px;
+      width: 98.5%;
+      height: 2px;
+      background: $color-sun;
+      border-radius: 3px;
+    }
+  }
+  .page-footer__container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  }
+    .page-footer__logo {
+    min-width: 85px;
+    margin-right: 115px;
+  }
+
+  .page-footer__copyright {
+    box-sizing: border-box;
+    display: block;
+  }
+}

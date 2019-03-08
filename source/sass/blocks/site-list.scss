@@ -1,0 +1,107 @@
+.site-list {
+  display: none;
+  // position: absolute;
+  // top: 10px;
+  // left: 10px;
+  // display: block;
+  // width: 281px;
+  // height: 454px;
+  // background: $white;
+  // border-radius: 10px;
+  // z-index: 5;
+  // outline: pink;
+}
+
+.site-list__item {
+  &--current {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 40%;
+      left: -77px;
+      width: 77px;
+      height: 2px;
+      background: $color-sun;
+      border-radius: 3px;
+    }
+  }
+}
+.site-list__link {
+  display: block;
+  padding: 10px 15px 9px;
+
+  text-align: left;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  color: $black;
+//   box-shadow: 0 1px 0 0 $grey-white, inset 0 1px 0 0 $grey-white;
+
+//   @include black-white-hov60-30;
+}
+
+// .site-list__item--more {
+//   display: none;
+// }
+
+// @media (min-width: $tablet-width) {
+//   .site-list {
+//     width: 335px;
+//     margin-top: 96px;
+//     z-index: 10;
+//     margin-left: -20px;
+//   }
+
+//   .site-list__link {
+//     box-sizing: border-box;
+//     padding: 10px 0 10px 20px;
+//     width: 167px;
+//     box-shadow: none;
+//     font-size: 15px;
+//     background-color: transparent;
+//   }
+// }
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    display: block;
+//     margin: 0;
+//     width: 440px;
+//     margin-left: -35px;
+  }
+
+//   .site-list__link {
+//     width: 220px;
+//     padding: 32px 0 32px 35px;
+//     font-size: 17px;
+//   }
+
+//   .site-list__item {
+//     &--first {
+//       position: relative;
+
+//       &::after {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//         width: 1px;
+//         height: 100%;
+//         background-color: $grey-white;
+//       }
+//     }
+//   }
+
+//   .site-list__item--more {
+//     display: block;
+//   }
+
+//   .site-list__item--more a {
+//     padding: 18px 0 5px 35px;
+//     font-size: 15px;
+//   }
+}

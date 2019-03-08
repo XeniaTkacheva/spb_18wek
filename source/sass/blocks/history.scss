@@ -1,0 +1,168 @@
+.history {
+  background-color: $color-sunlight;
+}
+
+.history__wrapper{
+  margin: 0 auto 41px;
+  padding: 23px 9px 29px;
+}
+
+.history__logo {
+  display: none;
+}
+
+.history__side{
+  display: none;
+}
+
+.history__title {
+  margin: 0 0 38px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  line-height: 29px;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
+.history__container {
+  display: block;
+  box-sizing: border-box;
+  padding: 0 2px;
+}
+
+.history__text{
+  margin: 0 20px 0 0;
+  display: none;
+  line-height: 21px;
+  &--first {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+.history__btn {
+  padding: 19px;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .history {
+    background-color: transparent;
+  }
+  .history__wrapper {
+    margin: 0 auto 45px;
+    padding: 0 0 29px;
+
+    max-width: 1170px;
+    // min-height: 665px;
+    background-image: url(../img/bg-book.jpg);
+    background-size: auto 665px;
+    background-repeat: no-repeat;
+    background-position: 50% top;
+}
+
+  .history__container {
+    min-height: 665px;
+    // width: 1097px;
+    padding: 73px 85px 137px;
+  }
+
+  .history__title {
+    margin-bottom: 66px;
+  }
+
+  .history__text{
+    display: block;
+    margin: 0 0 21px 0;
+
+  }
+
+  .history__btn {
+    display: block;
+    width: 270px;
+    margin: 47px auto 0;
+  }
+}
+
+@media (min-width: $laptop-width) {
+  .history__wrapper {
+    margin: 0 auto 85px;
+  }
+
+  .history__btn {
+    min-width: 316px;
+    margin: 69px auto 0;
+
+  }
+
+  .history__container {
+    padding: 73px 190px 137px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .history__wrapper {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 0 0 135px;
+    margin: 0 auto;
+    max-width: 1440px;
+
+    min-height: 665px;
+    background-image: url(../img/bg-book.jpg);
+    background-size: auto 665px;
+    background-repeat: no-repeat;
+  // background-position: 0 50%;
+
+    background-position: 343px bottom;
+    margin-bottom: 126px;
+  }
+
+  .history__side {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 208px;
+    flex-shrink: 0;
+    margin-right: 0;
+    min-height: 651px;
+    // padding: 28px 0 47px;
+    padding: 119px 0 137px;
+  }
+
+  .history__logo {
+    margin: 0;
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 900;
+    color: $black;
+    font-family: Playfair Display;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  .history__container {
+    min-height: 665px;
+    width: 1097px;
+    padding: 119px 215px 137px 196px;
+  }
+
+  .history__title {
+    margin-bottom: 59px;
+  }
+
+  .history__text {
+    display: block;
+    margin-bottom: 26px;
+  }
+
+  .history__btn {
+    min-width: 269px;
+    margin: 54px 0 0;
+
+  }
+}

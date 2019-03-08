@@ -1,0 +1,164 @@
+.publics {
+
+}
+
+.publics__wrapper{
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto 50px;
+  padding: 0 9px;
+  max-width: 1440px;
+
+}
+
+.publics__wrap{
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 9px;
+  margin-bottom: 50px;
+    max-width: 1440px;
+
+
+}
+
+.publics__title {
+  margin: 0 0 57px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  line-height: 48px;
+  font-size: 42px;
+  letter-spacing: 0.05em;
+}
+
+.publics__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.publics__item {
+  display: none;
+  margin: 0 auto;
+
+  &:nth-child(1) {
+    display: block;
+  }
+}
+
+.publics__slider {
+  display: block;
+  box-sizing: border-box;
+  width: 88px;
+  height: 10px;
+  padding-top: 5px;
+  margin: 25px auto 35px;
+}
+.publics__btn {
+  padding: 23px 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .publics__title {
+    margin-bottom: 80px;
+    padding-left: 74px;
+    font-family: Playfair Display;
+    font-weight: 700;
+    line-height: 76px;
+    font-size: 64px;
+    letter-spacing: 0.05em;
+  }
+
+  .publics__item {
+    display: block;
+        flex-shrink: 0;
+
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
+
+  .publics__image {
+    width: 229px;
+    height: 225px;
+  }
+
+  .publics__slider {
+    margin: 38px auto 63px;
+  }
+
+  .publics__wrap{
+    margin-bottom: 67px;
+  }
+  .publics__btn {
+    display: block;
+    margin: 0 auto;
+    width: 354px;
+  }
+}
+
+@media (min-width: $laptop-width) {
+  .publics__wrapper{
+    margin: 0 auto 80px;
+  }
+
+  .publics__title {
+    margin-bottom: 95px;
+    padding-left: 94px;
+  }
+  .publics__item {
+    display: block;
+        flex-shrink: 0;
+
+    &:nth-child(n) {
+      display: block;
+    }
+  }
+  .publics__slider {
+    margin: 0;
+  }
+
+  .publics__slider li {
+    display: none;
+  }
+  .publics__wrap{
+    margin-bottom: 100px;
+  }
+
+  .publics__btn {
+    width: 316px;
+    padding: 19px 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .publics__wrapper{
+     padding: 0 135px;
+}
+
+  .publics__wrap{
+    display: flex;
+    padding: 0 132px;
+    margin-bottom: 148px;
+  }
+
+  .publics__title {
+    margin-bottom: 75px;
+    padding: 0 0 0 10px;
+
+  }
+  .publics__list {
+  margin-bottom: 86px;
+  }
+  .publics__item {
+    margin: 0 10px;
+  }
+
+  .publics__image {
+    width: 264px;
+    height: 260px;
+  }
+  .publics__btn {
+    min-width: 360px;
+    margin-left: 217px;
+  }
+}
