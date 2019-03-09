@@ -20,17 +20,10 @@
   display: none;
 }
 
-.members__item {
-
-  outline: 1px solid blue;
-}
-
 .members__profile {
   box-sizing: border-box;
   display: flex;
   flex-shrink: 0;
-
-  outline: 1px solid red;
 }
 
 .members__photo,
@@ -43,8 +36,53 @@
 }
 
 .members__about {
+  box-sizing: border-box;
   border: 1px solid $color-sun;
   display: none;
+  padding: 17px 20px 8px 24px;
+
+}
+
+.members__name {
+  margin: 0;
+  font-weight: 700;
+  line-height: 21px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.members__degree {
+  margin: 0 0 14px;
+  font-style: italic;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: center;
+
+}
+
+.members__text {
+  margin: 0;
+  line-height: 16px;
+  font-size: 12px;
+  position: relative;
+  padding: 23px 0 0 10px;
+
+  &--more {
+    letter-spacing: -0.03em;
+    padding-top: 20px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 77px;
+    height: 2px;
+    top: 0;
+    left: 66px;
+    background: $color-sun;
+    border-radius: 3px;
+  }
 }
 
 .members__slider {
@@ -68,37 +106,30 @@
     font-size: 64px;
   }
 
-.members__list {
+// .members__list {
   // display: flex;
   // justify-content: flex-start;
   // flex-wrap: wrap;
   //   margin-left: -71px;
-}
+// }
 
   .members__item {
     display: flex;
     justify-content: center;
     margin-bottom: 72px;
+
     &:nth-child(2n) .members__profile {
-      background-color: rgba($grey, 0.3);
     flex-direction: row-reverse;
   }
-
-
 
     // &:nth-child(n+4) {
     //   display: none;
     // }
   }
 
-.members__profile {
-  margin-left: -72px;
-
-
-
-
-  outline: 1px solid green;
-}
+  .members__profile {
+    margin-left: -72px;
+  }
 
   .members__photo,
   .members__about {
@@ -175,23 +206,20 @@
 
   .members__item {
     display: block;
-    // display: flex;
-    // flex-wrap: wrap;
-    margin-bottom: 166px;
+    margin-bottom: 164px;
+
     &:last-child {
       margin-left: 41%;
+      margin-bottom: 0;
     }
 
     &:nth-child(2n) .members__profile {
-      background-color: rgba($color-sunlight, 0.3);
     flex-direction: row;
   }
-    &:nth-child(n+3) .members__profile,
-    &:nth-child(n+4) .members__profile {
-      background-color: rgba($color-light, 0.3);
+    &:nth-child(4n) .members__profile,
+    &:nth-child(4n-1) .members__profile {
       flex-direction: row-reverse;
     }
-
   }
 
   .members__profile {
@@ -206,5 +234,10 @@
   .members__image {
     width: 264px;
     height: 264px;
+  }
+
+  .members__paragraph {
+    padding-left: 20px;
+    margin: -123px 0 119px 126px;
   }
 }
