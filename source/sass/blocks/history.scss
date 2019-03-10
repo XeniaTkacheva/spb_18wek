@@ -17,7 +17,7 @@
 
 .history__title {
   margin: 0 0 38px;
-  font-family: Playfair Display;
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 700;
   line-height: 29px;
   font-size: 24px;
@@ -49,6 +49,7 @@
   .history {
     background-color: transparent;
   }
+
   .history__wrapper {
     margin: 0 auto 45px;
     padding: 0 0 29px;
@@ -59,7 +60,7 @@
     background-size: auto 665px;
     background-repeat: no-repeat;
     background-position: 50% top;
-}
+  }
 
   .history__container {
     min-height: 665px;
@@ -71,10 +72,9 @@
     margin-bottom: 66px;
   }
 
-  .history__text{
+  .history__text {
     display: block;
     margin: 0 0 21px 0;
-
   }
 
   .history__btn {
@@ -92,13 +92,11 @@
   .history__btn {
     min-width: 316px;
     margin: 69px auto 0;
-
   }
 
   .history__container {
     padding: 73px 190px 137px;
   }
-
 }
 
 @media (min-width: $desktop-width) {
@@ -140,7 +138,7 @@
     line-height: 24px;
     font-weight: 900;
     color: $black;
-    font-family: Playfair Display;
+    font-family: "Playfair Display", "Times New Roman", serif;
     text-align: left;
     padding-left: 15px;
   }
@@ -163,6 +161,5 @@
   .history__btn {
     min-width: 269px;
     margin: 54px 0 0;
-
   }
 }

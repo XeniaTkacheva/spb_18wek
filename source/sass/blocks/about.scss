@@ -29,7 +29,7 @@
   margin: 0 0 42px 0;
   padding: 0;
 
-  font-family: Playfair Display;
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -43,7 +43,7 @@
   line-height: 21px;
   // &--first {
   //   &::first-letter {
-  //     font-family: Playfair Display;
+  //     font-family: "Playfair Display", "Times New Roman", serif;
   //     font-size: 64px;
   //     font-weight: 900;
   //     line-height: 72px;
@@ -57,7 +57,7 @@
   padding-right: 6px;
   margin: -32px 0 0 0;
 
-  font-family: Playfair Display;
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-size: 64px;
   font-weight: 900;
   line-height: 72px;
@@ -75,14 +75,14 @@
   }
 
   .about__wrapper {
-//     background: $mild-white url("../img/hero-tablet@1x.jpg") no-repeat top left 50% / auto 100%;
+    //    background: $mild-white url("../img/hero-tablet@1x.jpg") no-repeat top left 50% / auto 100%;
 
-//     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-//       background: $mild-white url("../img/hero-tablet@2x.jpg") no-repeat top left 50% / auto 100%;
-//     }
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
+    //     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //       background: $mild-white url("../img/hero-tablet@2x.jpg") no-repeat top left 50% / auto 100%;
+    //     }
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-between;
     min-height: 478px;
     padding: 0 58px 0 86px;
   }
@@ -91,9 +91,10 @@
     display: flex;
     margin-bottom: 0;
   }
+
   .about__text {
     margin-right: 20px;
-}
+  }
 
   .about__picture {
     flex-shrink: 0;
@@ -148,10 +149,11 @@
 }
 
 @media (min-width: $laptop-width) {
-    .about__wrapper {
-      padding: 0 74px 0 105px;
-      min-height: 441px;
-}
+  .about__wrapper {
+    padding: 0 74px 0 105px;
+    min-height: 441px;
+  }
+
   .about__picture {
     margin-top: -76px;
     width: 291px;
@@ -177,11 +179,13 @@
   .about__column {
     margin-bottom: 0;
   }
+
   .about__picture {
     margin: -188px 0 0;
     width: 360px;
     height: 371px;
   }
+
   .about__image {
     display: block;
     width: 360px;

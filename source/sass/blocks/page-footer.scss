@@ -23,7 +23,7 @@
   box-sizing: border-box;
   text-decoration: none;
 
-  font-family: Playfair Display;
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 900;
   line-height: 29px;
   font-size: 24px;
@@ -81,6 +81,7 @@
     background-size: auto 100%;
     background-position: 50% 50%;
   }
+
   .page-footer__wrapper {
     position: relative;
     padding: 134px 30px 45px 5px;
@@ -98,12 +99,14 @@
       border-radius: 3px;
     }
   }
+
   .page-footer__container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 44px;
   }
-    .page-footer__logo {
+
+  .page-footer__logo {
     min-width: 85px;
     margin-right: 115px;
   }

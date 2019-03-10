@@ -17,6 +17,7 @@
   .slider__item {
     width: 12px;
     height: 12px;
+
     &:nth-child(n+4) {
       display: none;
     }
@@ -28,5 +29,3 @@
     display: none;
   }
 }
-
-

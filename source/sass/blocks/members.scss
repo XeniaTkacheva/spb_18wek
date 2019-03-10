@@ -1,28 +1,17 @@
 .members__wrapper{
   display: block;
   box-sizing: border-box;
-  margin: 0 auto 50px;
+  margin: 0 auto;
   padding: 0 28px;
   max-width: 1440px;
 }
 
-.members__title {
-  margin: 0 0 57px;
-  padding: 3px 0 0 9px;
 
-  font-family: Playfair Display;
-  font-weight: 700;
-  line-height: 48px;
-  font-size: 42px;
-  letter-spacing: 0.05em;
-}
-.members__logo {
-  display: none;
-}
 
 .members__profile {
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   flex-shrink: 0;
 }
 
@@ -38,9 +27,8 @@
 .members__about {
   box-sizing: border-box;
   border: 1px solid $color-sun;
-  display: none;
+  // display: none;
   padding: 17px 20px 8px 24px;
-
 }
 
 .members__name {
@@ -57,7 +45,6 @@
   line-height: 16px;
   font-size: 12px;
   text-align: center;
-
 }
 
 .members__text {
@@ -68,8 +55,9 @@
   padding: 23px 0 0 10px;
 
   &--more {
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     padding-top: 20px;
+    padding-left: 4px;
   }
 
   &::before {
@@ -94,16 +82,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .members__wrapper{
+  .members__wrapper {
     padding: 0 84px;
-  }
-
-  .members__title {
-    margin-bottom: 80px;
-    padding-left: 74px;
-
-    line-height: 76px;
-    font-size: 64px;
   }
 
 // .members__list {
@@ -119,7 +99,7 @@
     margin-bottom: 72px;
 
     &:nth-child(2n) .members__profile {
-    flex-direction: row-reverse;
+      flex-direction: row-reverse;
   }
 
     // &:nth-child(n+4) {
@@ -129,6 +109,7 @@
 
   .members__profile {
     margin-left: -72px;
+    flex-direction: row;
   }
 
   .members__photo,
@@ -155,43 +136,14 @@
 }
 
 @media (min-width: $laptop-width) {
-  .members__wrapper{
+  .members__wrapper {
     margin: 0 auto 80px;
     padding: 0 213px;
-  }
-
-  .members__title {
-    margin-bottom: 95px;
-    padding-left: 94px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .members__wrapper{
-     padding: 0;
-  }
-
-  .members__wrap {
-    margin: 0 auto;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    width: 1146px;
-    padding: 46px 0px 30px;
-  }
-
-  .members__logo {
-    display: block;
-    margin: 46px 0 0;
-
-    font-family: Playfair Display;
-    font-weight: 900;
-    line-height: 22px;
-    font-size: 18px;
-  }
-
-  .members__title {
-    margin-bottom: 75px;
+  .members__wrapper {
     padding: 0;
   }
 
@@ -214,8 +166,9 @@
     }
 
     &:nth-child(2n) .members__profile {
-    flex-direction: row;
-  }
+      flex-direction: row;
+    }
+
     &:nth-child(4n) .members__profile,
     &:nth-child(4n-1) .members__profile {
       flex-direction: row-reverse;

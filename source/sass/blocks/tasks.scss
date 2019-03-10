@@ -6,7 +6,8 @@
   display: block;
   padding: 0 9px 0;
 }
-.tasks__wrapper{
+
+.tasks__wrapper {
   display: block;
   box-sizing: border-box;
 }
@@ -16,28 +17,30 @@
 }
 
 .tasks__image {
-display: block;
-margin: 0 auto;
-width: 162px;
-height: 137px;
+  display: block;
+  margin: 0 auto;
+  width: 162px;
+  height: 137px;
 }
 
 .tasks__pagin {
   display: none;
 }
+
 .tasks__slider {
   display: block;
   width: 114px;
   height: 10px;
   margin: 25px auto 35px;
 }
+
 .tasks__title {
   display: block;
   box-sizing: border-box;
   margin: 0 auto;
   text-align: center;
 
-  font-family: Playfair Display;
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -48,14 +51,14 @@ height: 137px;
 
 .tasks__number {
   display: inline-block;
-  font-family: Playfair Display;
+  padding: 5px 0 8px 5px;
+
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 700;
   line-height: 43px;
   font-size: 36px;
   letter-spacing: 0.05em;
-
   color: $color-sun;
-  padding: 5px 0 8px 5px;
 }
 
 .tasks__list {
@@ -71,6 +74,7 @@ height: 137px;
   min-height: 160px;
   width: 220px;
   flex-shrink: 0;
+
   &--1 {
     display: block;
   }
@@ -101,17 +105,21 @@ height: 137px;
     text-align: left;
     margin-bottom: 10px;
   }
+
   .tasks__list {
     width: 100%;
     margin-bottom: 38px;
   }
+
   .tasks__item {
     display: block;
     margin: 0 26px 0 0;
   }
+
   .tasks__number {
     padding: 0 0 12px 0;
   }
+
   .tasks__slider {
     margin: 25px auto 55px;
     padding-right: 87px;
@@ -145,7 +153,6 @@ height: 137px;
     padding-right: 105px;
     width: 70px;
   }
-
 }
 
 @media (min-width: $desktop-width) {
@@ -156,6 +163,7 @@ height: 137px;
     justify-content: space-between;
     margin-bottom: 92px;
   }
+
   .tasks__wrapper {
     padding-left: 30px;
     width: 309px;
@@ -172,6 +180,7 @@ height: 137px;
     width: 232px;
     height: 197px;
   }
+
   .tasks__slider {
     display: none;
   }
@@ -188,7 +197,7 @@ height: 137px;
   .tasks__toggle {
     display: block;
     box-sizing: border-box;
-    font-family: Playfair Display;
+    font-family: "Playfair Display", "Times New Roman", serif;
     font-weight: 700;
     line-height: 43px;
     font-size: 36px;
@@ -206,11 +215,12 @@ height: 137px;
   .tasks__number {
     display: none;
   }
+
   .tasks__title {
     padding: 10px 0;
     margin-bottom: 70px;
-
   }
+
   .tasks__list {
     margin-bottom: 0;
   }
@@ -219,11 +229,12 @@ height: 137px;
     width: 267px;
     display: none;
     margin: 0;
+
     &--1 {
       display: block;
-
     }
   }
+
   .tasks__text {
     line-height: 21px;
     font-size: 16px;

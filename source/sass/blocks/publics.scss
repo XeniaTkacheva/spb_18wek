@@ -1,30 +1,23 @@
-.publics {
-
-}
-
-.publics__wrapper{
+.publics__wrapper {
   display: block;
   box-sizing: border-box;
   margin: 0 auto 50px;
   padding: 0 9px;
   max-width: 1440px;
-
 }
 
-.publics__wrap{
+.publics__wrap {
   display: block;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0 9px;
   margin-bottom: 50px;
-    max-width: 1440px;
-
-
+  max-width: 1440px;
 }
 
 .publics__title {
   margin: 0 0 57px;
-  font-family: Playfair Display;
+  font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 700;
   line-height: 48px;
   font-size: 42px;
@@ -61,7 +54,7 @@
   .publics__title {
     margin-bottom: 80px;
     padding-left: 74px;
-    font-family: Playfair Display;
+    font-family: "Playfair Display", "Times New Roman", serif;
     font-weight: 700;
     line-height: 76px;
     font-size: 64px;
@@ -70,7 +63,7 @@
 
   .publics__item {
     display: block;
-        flex-shrink: 0;
+    flex-shrink: 0;
 
     &:nth-child(n+4) {
       display: none;
@@ -86,9 +79,10 @@
     margin: 38px auto 63px;
   }
 
-  .publics__wrap{
+  .publics__wrap {
     margin-bottom: 67px;
   }
+
   .publics__btn {
     display: block;
     margin: 0 auto;
@@ -97,7 +91,7 @@
 }
 
 @media (min-width: $laptop-width) {
-  .publics__wrapper{
+  .publics__wrapper {
     margin: 0 auto 80px;
   }
 
@@ -107,12 +101,13 @@
   }
   .publics__item {
     display: block;
-        flex-shrink: 0;
+    flex-shrink: 0;
 
     &:nth-child(n) {
       display: block;
     }
   }
+
   .publics__slider {
     margin: 0;
   }
@@ -120,7 +115,7 @@
   .publics__slider li {
     display: none;
   }
-  .publics__wrap{
+  .publics__wrap {
     margin-bottom: 100px;
   }
 
@@ -131,11 +126,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .publics__wrapper{
-     padding: 0 135px;
-}
+  .publics__wrapper {
+    padding: 0 135px;
+  }
 
-  .publics__wrap{
+  .publics__wrap {
     display: flex;
     padding: 0 132px;
     margin-bottom: 148px;
@@ -144,11 +139,12 @@
   .publics__title {
     margin-bottom: 75px;
     padding: 0 0 0 10px;
+  }
 
-  }
   .publics__list {
-  margin-bottom: 86px;
+    margin-bottom: 86px;
   }
+
   .publics__item {
     margin: 0 10px;
   }
@@ -157,6 +153,7 @@
     width: 264px;
     height: 260px;
   }
+
   .publics__btn {
     min-width: 360px;
     margin-left: 217px;
