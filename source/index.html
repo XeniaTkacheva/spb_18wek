@@ -40,7 +40,7 @@
               <a class="site-list__link" href="methods.html">Методические материалы</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="publics.html">Публикации</a>
+              <a class="site-list__link" href="publications.html">Публикации</a>
             </li>
           </ul>
         </nav>
@@ -91,36 +91,36 @@
           </div>
           <div class="tasks__pagin">
             <ul class="tasks__toggles default-list">
-              <li class="tasks__toggle tasks__toggle--current">1.</li>
-              <li class="tasks__toggle">2.</li>
-              <li class="tasks__toggle">3.</li>
-              <li class="tasks__toggle">4.</li>
-              <li class="tasks__toggle">5.</li>
+              <li class="tasks__toggle tasks__toggle--current" onclick="openCity(event, 'task1')" tabindex="0">1.</li>
+              <li class="tasks__toggle" onclick="openCity(event, 'task2')" tabindex="0">2.</li>
+              <li class="tasks__toggle" onclick="openCity(event, 'task3')" tabindex="0">3.</li>
+              <li class="tasks__toggle" onclick="openCity(event, 'task4')" tabindex="0">4.</li>
+              <li class="tasks__toggle" onclick="openCity(event, 'task5')" tabindex="0">5.</li>
             </ul>
           </div>
           <div class="tasks__wrapper">
             <h2 class="tasks__title">Основные задачи</h2>
             <ul class="tasks__list default-list">
-              <li class="tasks__item tasks__item--1">
+              <li id="task1" class="tasks__item tasks__item--current">
                 <span class="tasks__number">1.</span>
                 <p class="tasks__text">Cоздание благоприятной научной атмосферы для комплексного исследования русского языка и литературы XVIII века в различных аспектах представителями различных филологических специальностей.</p>
               </li>
-              <li class="tasks__item tasks__item--2">
+              <li id="task2" class="tasks__item">
                 <span class="tasks__number">2.</span>
                 <p class="tasks__text">Интеграция внутриуниверситетских подразделений и в расширение научных связей Университета с академическими научными учреждениями.</p>
               </li>
-              <li class="tasks__item tasks__item--3">
+              <li id="task3" class="tasks__item">
                 <span class="tasks__number">3.</span>
                 <p class="tasks__text">Регулярное издание периодического сборника «Литературная культура России XVIII века», отражающего в первую очередь достижения университетской науки.</p>
               </li>
-              <!-- <li class="tasks__item tasks__item--4">
+              <li id="task4" class="tasks__item">
                 <span class="tasks__number">4.</span>
                 <p class="tasks__text">Разработка инновационных информационно-поисковых систем по корпусу текстов русской литературы XVIII века и выработка новых методов электронной обработки и описания классических текстов русской литературы.</p>
               </li>
-              <li class="tasks__item tasks__item--5">
+              <li id="task5" class="tasks__item">
                 <span class="tasks__number">5.</span>
                 <p class="tasks__text">Интеграция современной академической науки в университетский учебный процесс, создание учебно-методических комплексов и пособий нового поколения разных типов.</p>
-              </li> -->
+              </li>
             </ul>
             <ul class="tasks__slider slider default-list">
               <li class="slider__item slider__item--current"><span class="visually-hidden">1</span></li>
@@ -211,7 +211,7 @@
               <a class="footer-list__link" href="projects.html">Проекты</a>
             </li>
             <li class="footer-list__item">
-              <a class="footer-list__link" href="publics.html">Публикации</a>
+              <a class="footer-list__link" href="publications.html">Публикации</a>
             </li>
             <li class="footer-list__item">
               <a class="footer-list__link" href="members.html">Участники</a>

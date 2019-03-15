@@ -1,0 +1,11 @@
+wp18.xenia-tkacheva.ru
+
+// База данных
+vek18
+
+// Пользователь
+spb_vek18 - H7z4X2j9
+
+// Администратор логин WP и FTP клиент для сайта wp18.xenia-tkacheva.ru/
+admin_vek18 - SpbVek18+
+

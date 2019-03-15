@@ -167,13 +167,13 @@
 
 @media (min-width: $desktop-width) {
   .about {
-    min-height: 387px;
+    // min-height: 387px;
   }
 
   .about__wrapper {
     display: block;
     padding: 0 109px 0 337px;
-    min-height: 385px
+    min-height: 385px;
   }
 
   .about__column {
@@ -197,7 +197,7 @@
   }
 
   .about__text {
-    margin: 0 75px 10px 0;
+    margin: 0 75px 0 0;
   }
 
 //   .about__wrapper {

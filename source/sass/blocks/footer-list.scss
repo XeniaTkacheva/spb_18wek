@@ -20,6 +20,8 @@
 }
 
 .footer-list__link {
+  display: block;
+  padding: 5px;
   text-decoration: none;
   line-height: 34px;
   font-size: 14px;
@@ -44,9 +46,13 @@
   }
 
   .footer-list__item {
-    text-align: left;
+    // text-align: left;
     min-width: 190px;
     margin-right: 40px;
+  }
 
+  .footer-list__link {
+    display: flex;
+    // margin-right: auto;
   }
 }
