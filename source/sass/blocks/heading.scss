@@ -1,12 +1,25 @@
 .heading__title {
-  margin: 0 0 57px;
-  padding: 3px 0 0 9px;
+  margin: 0;
+  padding: 0;
+  // margin: 0 0 17px;
+  // padding: 3px 0 0 37px;
 
   font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 700;
   line-height: 48px;
   font-size: 42px;
   letter-spacing: 0.05em;
+
+  &--members {
+
+  }
+
+  &--students {
+    letter-spacing: 0.01em;
+    padding-left: 10px;
+    line-height: 53px;
+    margin: 0 0 44px;
+  }
 }
 
 .heading__logo {
@@ -14,8 +27,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .heading__wrapper {
-    padding: 0 84px;
+  .heading__wrap {
+    padding: 0;
   }
 
   .heading__title {
@@ -24,6 +37,14 @@
 
     line-height: 76px;
     font-size: 64px;
+
+    &--students {
+      letter-spacing: 0.05em;
+      padding-left: 21px;
+      line-height: 84px;
+      margin-bottom: 65px;
+      margin-top: -8px;
+    }
   }
 }
 
@@ -31,6 +52,13 @@
   .heading__title {
     margin-bottom: 95px;
     padding-left: 94px;
+
+    &--students {
+      padding: 26px 0 0 105px;
+      line-height: 84px;
+      margin-bottom: 65px;
+      margin-top: 0;
+    }
   }
 }
 
@@ -42,6 +70,13 @@
     justify-content: space-between;
     width: 1146px;
     padding: 46px 0px 20px;
+
+    &--reverse {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+
   }
 
   .heading__logo {
@@ -57,8 +92,15 @@
   }
 
   .heading__title {
-    margin-bottom: 75px;
+    margin: 0 0 75px 0;
     padding: 0;
-    line-height: normal;
+
+    &--reverse {
+      margin-left: 130px;
+    }
+    &--students {
+      margin-top: -4px;
+      margin-bottom: 29px;
+    }
   }
 }

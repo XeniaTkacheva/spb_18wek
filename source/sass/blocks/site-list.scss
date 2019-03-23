@@ -12,8 +12,22 @@
   // outline: pink;
 }
 
+@keyframes stretching {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  100% {
+    left: -77px;
+    width: 77px;
+  }
+}
+
 .site-list__item {
-  &--current {
+  &--current a {
+    color: $color-sun;
+  }
+  &:hover{
     position: relative;
     &::before {
       content: "";
@@ -25,9 +39,13 @@
       height: 2px;
       background: $color-sun;
       border-radius: 3px;
+
+      animation-name: stretching;
+      animation-duration: 0.5s;
     }
   }
 }
+
 
 .site-list__link {
   display: block;
