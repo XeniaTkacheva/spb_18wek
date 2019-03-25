@@ -38,6 +38,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   z-index: 10;
+
+  &:focus {
+    outline-color: transparent;
+  }
 }
 
 .page-header__container {

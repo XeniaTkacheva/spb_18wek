@@ -62,7 +62,7 @@
     <main class="inner-page">
       <section class="heading">
         <div class="heading__wrap heading__wrap--reverse">
-          <h2 class="heading__title heading__title--reverse">Научные проекты</h2>
+          <h2 class="heading__title heading__title--projects heading__title--reverse">Научные проекты</h2>
           <p class="heading__logo">XVIII <span class="dot">.</span></p>
         </div>
       </section>
@@ -109,8 +109,8 @@
             <li id="project6" class="projects__item projects__item--current">
               <span class="projects__number">6.</span>
               <div class="projects__profile">
-                <h4 class="projects__title">«Электронная антология русской литературы XVIII века» (2007–2013).</h4>
-                <p class="projects__about"><span class="dot">*</span>* Проект осуществлялся в сотрудничестве с Институтом лингвистических исследований РАН, был поддержан РГНФ («Исследование риторических трудов М. В. Ломоносова (лингвистический и историко-культурный аспекты)», 12-04-00109) и программой фундаментальных НИР СПбГУ («Исследование русской литературной культуры XVIII века в контексте риторической традиции»).</p>
+                <h4 class="projects__title">«Риторика М. В. Ломоносова» (2012–2018).</h4>
+                <p class="projects__about"><span class="dot">*</span> Проект осуществлялся в сотрудничестве с Институтом лингвистических исследований РАН, был поддержан РГНФ («Исследование риторических трудов М. В. Ломоносова (лингвистический и историко-культурный аспекты)», 12-04-00109) и программой фундаментальных НИР СПбГУ («Исследование русской литературной культуры XVIII века в контексте риторической традиции»).</p>
               </div>
             </li>
             <li id="project7" class="projects__item projects__item--current">
@@ -140,6 +140,11 @@
 
       <section class="materials">
         <div class="materials__wrapper">
+          <div class="materials__picture">
+            <picture>
+              <img class="materials__image" src="img/image5@1x.jpg" srcset="img/image3@2x.jpg 2x" alt="Гравюра" width="362" height="244">
+            </picture>
+          </div>
           <div class="materials__column">
             <h3 class="materials__title">Материалы проектов:</h3>
 
@@ -212,13 +217,6 @@
 
             </ul>
           </div>
-          <div class="materials__picture">
-            <picture>
-              <img class="materials__image" src="img/image5@1x.jpg" srcset="img/image3@2x.jpg 2x" alt="Гравюра" width="362" height="244">
-            </picture>
-          </div>
-
-
         </div>
       </section>
       <p class="materials__paragraph paragraph">&sect;9</p>
@@ -258,13 +256,16 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <p class="copyright__text">© Факультет филологии и искусств СПбГУ, 2008-2019</p>
-          <p class="copyright__text">© Филологический факультет СПбГУ, 2010-2019</p>
+          <div>
+            <p class="copyright__text">© Факультет филологии и искусств СПбГУ, 2008-2019</p>
+            <p class="copyright__text">© Филологический факультет СПбГУ, 2010-2019</p>
+          </div>
           <a class="copyright__link" href="#" target="_blank">
             Designed by Anna Novik
           </a>
         </div>
       </div>
+      <button class="page-footer__btn" onclick="topFunction()" id="myBtn" title="К началу">&uarr;</button>
     </footer>
 
     <script src="js/picturefill.min.js" async></script>

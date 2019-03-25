@@ -1,6 +1,7 @@
 .materials__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  // display: flex;
+  // justify-content: space-between;
   box-sizing: border-box;
   max-width: 1440px;
   min-width: 320px;
@@ -10,6 +11,7 @@
 
 .materials__list {
   display: block;
+  margin-bottom: 80px;
 }
 .materials__item {
   display: block;
@@ -19,7 +21,7 @@
   display: inline-block;
   width: 49px;
   height: 59px;
-  padding: 0 0 8px 5px;
+  // padding: 0 0 8px 5px;
   margin: 0 44px 0 0;
 
   font-family: "Playfair Display", "Times New Roman", serif;
@@ -39,7 +41,7 @@
 
 .materials__name {
   margin: 0;
-  padding: 5px 0 11px;
+  padding: 0 0 11px;
   font-style: italic;
   font-size: 16px;
   line-height: 21px;
@@ -49,18 +51,22 @@
 .materials__title{
   margin: 0;
   padding: 11px 0 25px;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   position: relative;
-
 }
 
 .materials__link {
-  display: block;
-  width: 194px;
-  padding: 0;
-  margin: 0 0 79px;
+  position: relative;
+  display: inline-block;
+  padding: 15px 0 30px;
+  // margin: 0 0 30px;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: italic;
 
   text-decoration: none;
   color: $black;
@@ -68,10 +74,26 @@
   &:hover {
     color: $color-sun;
   }
+
+    &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 25px;
+    left: 0;
+    background: $color-sun;
+    border-radius: 3px;
+  }
 }
 
-.materials__picture {
-  display: none;
+.materials__picture,
+.materials__image {
+  display: block;
+  width: 302px;
+  height: 204px;
+  flex-shrink: 0;
 }
 
 .materials__paragraph {
@@ -80,22 +102,84 @@
 }
 
 @media (min-width: $tablet-width) {
+  .materials__wrapper {
+    padding: 0 84px;
+  }
+
+  .materials__picture,
+  .materials__image {
+    display: block;
+    width: 362px;
+    height: 244px;
+    flex-shrink: 0;
+    margin: 0 auto;
+  }
+
+    .materials__picture {
+      margin-bottom: 47px;
+    }
+
+  .materials__title{
+    margin: 0 0 18px;
+  }
+
+  .materials__list {
+    margin-bottom: 100px;
+  }
+
+  .materials__number {
+    width: 49px;
+    height: 43px;
+    margin: 0 17px 0 0;
+
+    line-height: 43px;
+    font-size: 36px;
+  }
+
   .materials__item {
     display: flex;
+    align-items: baseline;
   }
 
   .materials__profile {
-    position: relative;
-    display: block;
-    width: 460px;
+    max-width: none;
   }
+
+    .materials__name {
+    padding: 0;
+  }
+
+  .materials__link {
+    padding: 20px 0 20px;
+
+      &::before {
+      bottom: 17px;
+    }
+  }
+}
+
+@media (min-width: $laptop-width) {
+  .materials__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    // padding: 0 147px 12px;
+  }
+
+  .materials__picture {
+    margin-top: 130px;
+  }
+
 }
 
 @media (min-width: $desktop-width) {
   .materials__wrapper {
     display: flex;
-    justify-content: space-between;    box-sizing: border-box;
-    padding: 0 147px 12px;
+    justify-content: center;
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    padding: 0 0 12px;
   }
 
   // .materials__list {
@@ -126,7 +210,8 @@
   .materials__profile {
     position: relative;
     display: block;
-    width: 460px;
+    width: 656px;
+    max-width: none;
   }
 
   .materials__name {
@@ -139,7 +224,7 @@
 
   .materials__title{
     margin: 0;
-    padding: 11px 0 25px;
+    padding: 11px 0 0;
     font-size: 24px;
     line-height: 29px;
     font-family: "Playfair Display", "Times New Roman", serif;
@@ -148,22 +233,17 @@
   }
 
   .materials__link {
-    display: block;
-    width: 194px;
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
 
-    text-decoration: none;
-    color: $black;
-
-    &:hover {
-      color: $color-sun;
+      &::before {
+      bottom: 8px;
     }
   }
 
   .materials__picture {
     display: block;
-    margin: 98px 0 0;
+    margin: 150px 0 0;
     width: 353px;
     height: 513px;
   }

@@ -59,6 +59,8 @@
   font-size: 36px;
   letter-spacing: 0.05em;
   color: $color-sun;
+
+
 }
 
 .tasks__list {
@@ -198,35 +200,43 @@
     cursor: pointer;
     display: block;
     position: relative;
-    border: 3px solid transparent;
-    border-radius: 5px;
-    padding-left: 20px;
+    border: 2px solid transparent;
+    // border-radius: 5px;
+    padding: 2px;
+    // padding-left: 20px;
     // padding-top: 1px;
+    padding-bottom: 7px;
     box-sizing: border-box;
     font-family: "Playfair Display", "Times New Roman", serif;
     font-weight: 700;
-    line-height: 43px;
+    line-height: 36px;
     font-size: 36px;
     letter-spacing: 0.05em;
     color: $color-sun;
-    width: 71px;
-    height: 61px;
+    // width: 71px;
+    // height: 61px;
+    margin-bottom: 10px;
     // padding-bottom: 2px;
 
+    &:focus,
+    &:hover {
+      outline-color: transparent;
+      border-bottom: 2px solid $color-sunlight;
+    }
+
     &--current {
+
       &::after {
         content: "";
         display: block;
         position: absolute;
-        width: 45%;
+        width: 100%;
         height: 3px;
-        bottom: 10%;
-        left: 30%;
+        bottom: -2px;
+        left: 0;
         background: $color-sun;
         border-radius: 3px;
       }
-
-      // text-decoration: underline;
     }
   }
 

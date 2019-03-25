@@ -218,6 +218,12 @@
     font-size: 28px;
     text-align: center;
     letter-spacing: 0.05em;
+
+    &:hover,
+    &:active {
+    color: $black;
+    cursor: inherit;
+  }
     }
 
   .events__date span {
@@ -240,7 +246,7 @@
   }
 
   .events__photo {
-    width: 364px;
+    width: auto;
     height: auto;
   }
 

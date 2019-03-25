@@ -91,11 +91,11 @@
           </div>
           <div class="tasks__pagin">
             <ul class="tasks__toggles default-list">
-              <li class="tasks__toggle tasks__toggle--current" onclick="openCity(event, 'task1')" tabindex="0">1.</li>
-              <li class="tasks__toggle" onclick="openCity(event, 'task2')" tabindex="0">2.</li>
-              <li class="tasks__toggle" onclick="openCity(event, 'task3')" tabindex="0">3.</li>
-              <li class="tasks__toggle" onclick="openCity(event, 'task4')" tabindex="0">4.</li>
-              <li class="tasks__toggle" onclick="openCity(event, 'task5')" tabindex="0">5.</li>
+              <li class="tasks__toggle tasks__toggle--current" onclick="openCity(event, 'task1')" onkeydown="openCity1(event, 'task1')" tabindex="0">1.</li>
+              <li class="tasks__toggle" onclick="openCity(event, 'task2')" onkeydown="openCity1(event, 'task2')" tabindex="0">2.</li>
+              <li class="tasks__toggle" onclick="openCity(event, 'task3')" onkeydown="openCity1(event, 'task3')" tabindex="0">3.</li>
+              <li class="tasks__toggle" onclick="openCity(event, 'task4')" onkeydown="openCity1(event, 'task4')" tabindex="0">4.</li>
+              <li class="tasks__toggle" onclick="openCity(event, 'task5')" onkeydown="openCity1(event, 'task5')" tabindex="0">5.</li>
             </ul>
           </div>
           <div class="tasks__wrapper">
@@ -156,28 +156,28 @@
             <li class="publics__item">
               <a href="#" class="publics__link">
                 <picture>
-                  <img class="publics__image" src="img/book1@1x.jpg" alt="Фото Opera Slavica" width="264" height="260">
+                  <img class="publics__image" src="img/events_pic/book1@1x.jpg" alt="Фото Opera Slavica" width="264" height="260">
                 </picture>
               </a>
             </li>
             <li class="publics__item">
               <a href="#" class="publics__link">
                 <picture>
-                  <img class="publics__image" src="img/book2@1x.jpg" alt="Фото Риторика" width="264" height="260">
+                  <img class="publics__image" src="img/events_pic/book2@1x.jpg" alt="Фото Риторика" width="264" height="260">
                 </picture>
               </a>
             </li>
             <li class="publics__item">
               <a href="#" class="publics__link">
                 <picture>
-                  <img class="publics__image" src="img/book3@1x.jpg" alt="Фото Литературные связи" width="264" height="260">
+                  <img class="publics__image" src="img/events_pic/book3@1x.jpg" alt="Фото Литературные связи" width="264" height="260">
                 </picture>
               </a>
             </li>
             <li class="publics__item">
               <a href="#" class="publics__link">
                 <picture>
-                  <img class="publics__image" src="img/book4@1x.jpg" alt="Фото Petra Philologica" width="264" height="260">
+                  <img class="publics__image" src="img/events_pic/book4@1x.jpg" alt="Фото Petra Philologica" width="264" height="260">
                 </picture>
               </a>
             </li>
@@ -228,14 +228,18 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <p class="copyright__text">© Факультет филологии и искусств СПбГУ, 2008-2019</p>
-          <p class="copyright__text">© Филологический факультет СПбГУ, 2010-2019</p>
+          <div>
+            <p class="copyright__text">© Факультет филологии и искусств СПбГУ, 2008-2019</p>
+            <p class="copyright__text">© Филологический факультет СПбГУ, 2010-2019</p>
+          </div>
           <a class="copyright__link" href="#" target="_blank">
             Designed by Anna Novik
           </a>
         </div>
       </div>
+      <button class="page-footer__btn" onclick="topFunction()" id="myBtn" title="К началу">&uarr;</button>
     </footer>
+
 
     <script src="js/picturefill.min.js" async></script>
     <script src="js/main.js"></script>
