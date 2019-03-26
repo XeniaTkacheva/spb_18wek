@@ -110,11 +110,11 @@
 
     min-height: 665px;
     background-image: url(../img/bg-book.jpg);
-    background-size: auto 665px;
+    background-size: contain;
     background-repeat: no-repeat;
   // background-position: 0 50%;
 
-    background-position: 343px bottom;
+    background-position: 343px center;
     margin-bottom: 126px;
   }
 

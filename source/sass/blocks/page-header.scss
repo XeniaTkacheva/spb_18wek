@@ -3,6 +3,8 @@
   min-height: 568px;
   position: relative;
   box-sizing: border-box;
+  background-color: $reddish-dark;
+
 }
 
 .page-header__wrapper {
@@ -24,25 +26,25 @@
   background-position: left bottom;
 }
 
-.page-header__nav-toggle {
-  display: block;
-  position: absolute;
-  left: 19px;
-  top: 10px;
-  width: 60px;
-  height: 60px;
-  border: none;
-  background: transparent;
+// .page-header__nav-toggle {
+//   display: block;
+//   position: absolute;
+//   left: 19px;
+//   top: 10px;
+//   width: 60px;
+//   height: 60px;
+//   border: none;
+//   background: transparent;
 
-  background-image: url(../img/icon-menu.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  z-index: 10;
+//   background-image: url(../img/icon-menu.svg);
+//   background-repeat: no-repeat;
+//   background-position: 50% 50%;
+//   z-index: 10;
 
-  &:focus {
-    outline-color: transparent;
-  }
-}
+//   &:focus {
+//     outline-color: transparent;
+//   }
+// }
 
 .page-header__container {
   box-sizing: border-box;
@@ -64,6 +66,7 @@
 .page-header__logo1 {
   display: block;
   box-sizing: border-box;
+  min-width: 87px;
   text-align: center;
   padding: 0 10px 0 0;
 
@@ -139,7 +142,7 @@
 .page-header__btn {
   display: inline-block;
   min-width: 306px;
-  margin: 0 9px;
+  margin: 0 9px 90px;
   color: $white;
 }
 // .page-header__logo[href]:hover {
@@ -171,9 +174,9 @@
     margin-right: 306px;
   }
 
-  .page-header__nav-toggle {
-    left: 35px;
-  }
+  // .page-header__nav-toggle {
+  //   left: 35px;
+  // }
 
   .page-header__logos {
     margin: -76px 56px 0 0;
@@ -227,17 +230,17 @@
     padding-top: 53px;
   }
 
-  .page-header__nav-toggle {
-    left: 40px;
-    top: 35px;
-    width: 70px;
-    height: 70px;
+  // .page-header__nav-toggle {
+  //   left: 40px;
+  //   top: 35px;
+  //   width: 70px;
+  //   height: 70px;
 
-    background-image: url(../img/icon-menu.svg);
-    background-repeat: no-repeat;
-    background-size: 35px auto;
+  //   background-image: url(../img/icon-menu.svg);
+  //   background-repeat: no-repeat;
+  //   background-size: 35px auto;
 
-  }
+  // }
 
   .page-header__logos {
     margin: -88px 41px 0 0;
@@ -274,7 +277,9 @@
 
 @media (min-width: $desktop-width) {
   .page-header {
+    background-color: transparent;
     min-height: 331px;
+
     &::after {
       content: "";
       display: block;
@@ -325,9 +330,9 @@
     display: block;
   }
 
-  .page-header__nav-toggle {
-    display: none;
-  }
+  // .page-header__nav-toggle {
+  //   display: none;
+  // }
 
   .page-header__logos {
     display: none;

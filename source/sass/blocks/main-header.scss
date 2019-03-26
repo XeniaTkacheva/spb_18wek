@@ -3,6 +3,7 @@
   min-height: 568px;
   position: relative;
   box-sizing: border-box;
+  background-color: $reddish-dark;
 }
 
 .main-header__wrapper {
@@ -23,26 +24,6 @@
   background-position: left bottom;
 }
 
-.main-header__nav-toggle {
-  display: block;
-  position: absolute;
-  left: 19px;
-  top: 10px;
-  width: 60px;
-  height: 60px;
-  border: none;
-  background: transparent;
-
-  background-image: url(../img/icon-menu.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  z-index: 10;
-
-  &:focus {
-    outline-color: transparent;
-  }
-}
-
 .main-header__container {
   box-sizing: border-box;
   // background-color: $color-sunlight;
@@ -54,16 +35,20 @@
 }
 
 .main-header__nav {
-  display: flex;
-  justify-content: flex-end;
+  display: block;
+  position: relative;
+  // display: flex;
+  // justify-content: flex-end;
   box-sizing: border-box;
   padding: 25px;
+
 }
 
 .main-header__logo1 {
   display: block;
   box-sizing: border-box;
-  text-align: center;
+  min-width: 87px;
+  text-align: right;
   padding: 0 10px 0 0;
 
   text-decoration: none;
@@ -140,7 +125,7 @@
 .main-header__btn {
   display: inline-block;
   min-width: 306px;
-  margin: 0 9px;
+  margin: 0 9px 90px;
   color: $white;
 }
 // .main-header__logo[href]:hover {
@@ -168,11 +153,15 @@
   }
 
   .main-header__nav {
+    display: flex;
+    justify-content: flex-end;
     margin-right: 306px;
   }
 
-  .main-header__nav-toggle {
-    left: 35px;
+
+
+  .main-header__logo1 {
+    // margin-top: 40px;
   }
 
   .main-header__logos {
@@ -227,16 +216,7 @@
     padding-top: 53px;
   }
 
-  .main-header__nav-toggle {
-    left: 40px;
-    top: 35px;
-    width: 70px;
-    height: 70px;
 
-    background-image: url(../img/icon-menu.svg);
-    background-repeat: no-repeat;
-    background-size: 35px auto;
-  }
 
   .main-header__logos {
     margin: -88px 41px 0 0;
@@ -273,6 +253,8 @@
 @media (min-width: $desktop-width) {
   .main-header {
     margin-bottom: 128px;
+    background-color: transparent;
+
 
     &::after {
       content: "";
@@ -335,6 +317,7 @@
   }
 
   .main-header__logo1 {
+    margin: 0;
     font-size: 18px;
     line-height: 24px;
     font-weight: 900;

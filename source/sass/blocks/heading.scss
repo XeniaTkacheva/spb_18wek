@@ -1,36 +1,23 @@
 .heading__title {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 33px;
+  padding: 0 0 0 10px;
   // margin: 0 0 17px;
   // padding: 3px 0 0 37px;
 
   font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 700;
-  line-height: 48px;
+  line-height: 54px;
   font-size: 42px;
   letter-spacing: 0.05em;
 
-  &--members {
-
-  }
-
   &--methods {
-    padding-left: 10px;
     line-height: 56px;
     margin: 0 0 70px;
     letter-spacing: 0.02em;
   }
 
-
-  &--projects  {
-    padding-left: 10px;
-    line-height: 54px;
-    margin: 0 0 33px;
-  }
-
   &--students {
     letter-spacing: 0.01em;
-    padding-left: 10px;
     line-height: 53px;
     margin: 0 0 44px;
   }
@@ -51,9 +38,9 @@
 
     line-height: 76px;
     font-size: 64px;
+    letter-spacing: 0.05em;
 
     &--students {
-      letter-spacing: 0.05em;
       padding-left: 21px;
       line-height: 84px;
       margin-bottom: 65px;
@@ -70,7 +57,6 @@
       padding-left: 83px;
       line-height: 85px;
       margin: -10px 0 104px;
-      letter-spacing: 0.05em;
     }
   }
 }
@@ -110,11 +96,14 @@
     padding: 42px 0px 20px;
 
     &--reverse {
-      flex-direction: row-reverse;
-      justify-content: flex-end;
+      position: relative;
+      margin: 0 auto;
+      box-sizing: border-box;
+      display: block;
+      width: auto;
+      max-width: 1440px;
+      padding: 42px 20px 20px 337px;
     }
-
-
   }
 
   .heading__logo {
@@ -127,18 +116,24 @@
     font-weight: 900;
     line-height: 22px;
     font-size: 18px;
+
+    &--reverse {
+      margin: 0;
+      position: absolute;
+      top: 85px;
+      left: 142px;
+    }
+
   }
 
   .heading__title {
+    display: block;
     margin: 0 0 75px 0;
     padding: 0;
 
-    &--reverse {
-      margin-left: 130px;
-    }
     &--students {
-      margin-top: -4px;
       margin-bottom: 29px;
+
     }
   }
 }

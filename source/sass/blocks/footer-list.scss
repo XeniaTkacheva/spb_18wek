@@ -72,6 +72,10 @@
     // text-align: left;
     min-width: 190px;
     margin-right: 40px;
+
+    &:last-child {
+      margin-top: 0;
+    }
   }
 
   .footer-list__link {

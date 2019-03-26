@@ -1,22 +1,29 @@
-// var tasksToggle = document.querySelectorAll(".tasks__toggle");
-// var tasksItem = document.querySelectorAll(".tasks__item");
+var btnOn = document.querySelector(".nav-toggle");
+  btnOn.classList.remove("nav-toggle--off");
+  btnOn.classList.add("nav-toggle--on");
 
-// console.log(tasksToggle, tasksItem);
+var siteMenu = document.querySelector(".site-list");
+  siteMenu.classList.remove("site-list--on");
+  siteMenu.classList.add("site-list--off");
 
-// for (var i = 0; i < tasksItem.length; i++){
-//     tasksToggle[i].addEventListener("click", function (evt, tasksToggle, tasksItem) {
-//       tasksToggle[i].classList.add("tasks__toggle--current");
-//       tasksItem[i].classList.add("tasks__item--current");
-//     });
-//   };
+// Попап-меню на мобильных версиях
+
+var menuOn = document.querySelector(".site-list");
+var links = document.querySelectorAll(".site-list__link");
+
+btnOn.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  menuOn.classList.toggle("site-list--js");
+  for (i = 0; i < links.length; i++){
+  links[i].classList.toggle("site-list__link--js");
+}
+  btnOn.classList.toggle("nav-toggle--close");
+});
 
 
-// classList.toggle("newClassName")
+// Список задач на главной
 
-
-
-
-function openCity(evt, cityName) {
+function openTask(evt, cityName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -39,7 +46,7 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " tasks__toggle--current";
 }
 
-function openCity1(evt, cityName) {
+function openTask1(evt, cityName) {
   if (event.keyCode == 13) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -63,6 +70,8 @@ function openCity1(evt, cityName) {
     evt.currentTarget.className += " tasks__toggle--current";
   }
 }
+
+// Кнопка "Наверх"
 
 window.onscroll = function() {scrollFunction()};
 

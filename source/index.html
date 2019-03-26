@@ -15,12 +15,12 @@
 
     <header class="main-header">
       <div class="main-header__wrapper">
-        <button class="main-header__nav-toggle main-header__nav-toggle--on" type="button">
+        <button class="main-header__nav-toggle nav-toggle nav-toggle--off" type="button">
             <span class="visually-hidden">Открыть меню</span>
         </button>
         <nav class="main-header__nav">
           <a href="#" class="main-header__logo1">XVIII <span class="dot">.</span></a>
-          <ul class="main-header__list site-list default-list">
+          <ul class="main-header__list site-list site-list--on default-list">
             <li class="site-list__item site-list__item--current">
               <a class="site-list__link">О семинаре</a>
             </li>
@@ -91,11 +91,11 @@
           </div>
           <div class="tasks__pagin">
             <ul class="tasks__toggles default-list">
-              <li class="tasks__toggle tasks__toggle--current" onclick="openCity(event, 'task1')" onkeydown="openCity1(event, 'task1')" tabindex="0">1.</li>
-              <li class="tasks__toggle" onclick="openCity(event, 'task2')" onkeydown="openCity1(event, 'task2')" tabindex="0">2.</li>
-              <li class="tasks__toggle" onclick="openCity(event, 'task3')" onkeydown="openCity1(event, 'task3')" tabindex="0">3.</li>
-              <li class="tasks__toggle" onclick="openCity(event, 'task4')" onkeydown="openCity1(event, 'task4')" tabindex="0">4.</li>
-              <li class="tasks__toggle" onclick="openCity(event, 'task5')" onkeydown="openCity1(event, 'task5')" tabindex="0">5.</li>
+              <li class="tasks__toggle tasks__toggle--current" onclick="openTask(event, 'task1')" onkeydown="openTask1(event, 'task1')" tabindex="0">1.</li>
+              <li class="tasks__toggle" onclick="openTask(event, 'task2')" onkeydown="openTask1(event, 'task2')" tabindex="0">2.</li>
+              <li class="tasks__toggle" onclick="openTask(event, 'task3')" onkeydown="openTask1(event, 'task3')" tabindex="0">3.</li>
+              <li class="tasks__toggle" onclick="openTask(event, 'task4')" onkeydown="openTask1(event, 'task4')" tabindex="0">4.</li>
+              <li class="tasks__toggle" onclick="openTask(event, 'task5')" onkeydown="openTask1(event, 'task5')" tabindex="0">5.</li>
             </ul>
           </div>
           <div class="tasks__wrapper">
@@ -123,11 +123,11 @@
               </li>
             </ul>
             <ul class="tasks__slider slider default-list">
-              <li class="slider__item slider__item--current"><span class="visually-hidden">1</span></li>
-              <li class="slider__item"><span class="visually-hidden">2</span></li>
-              <li class="slider__item"><span class="visually-hidden">3</span></li>
-              <li class="slider__item"><span class="visually-hidden">4</span></li>
-              <li class="slider__item"><span class="visually-hidden">5</span></li>
+              <li class="slider__item slider__item--current" onclick="openTask(event, 'task1')" onkeydown="openTask1(event, 'task1')" tabindex="0"><span class="visually-hidden">1</span></li>
+              <li class="slider__item" onclick="openTask(event, 'task2')" onkeydown="openTask1(event, 'task2')" tabindex="0"><span class="visually-hidden">2</span></li>
+              <li class="slider__item" onclick="openTask(event, 'task3')" onkeydown="openTask1(event, 'task1')" tabindex="0"><span class="visually-hidden">3</span></li>
+              <li class="slider__item" onclick="openTask(event, 'task4')" onkeydown="openTask1(event, 'task1')" tabindex="0"><span class="visually-hidden">4</span></li>
+              <li class="slider__item" onclick="openTask(event, 'task5')" onkeydown="openTask1(event, 'task1')" tabindex="0"><span class="visually-hidden">5</span></li>
             </ul>
           </div>
         </div>
