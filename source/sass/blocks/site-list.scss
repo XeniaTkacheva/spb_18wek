@@ -12,17 +12,6 @@
 .site-list {
   display: block;
   box-sizing: border-box;
-  // display: none;
-  // position: absolute;
-  // top: 10px;
-  // left: 10px;
-  // display: block;
-  // width: 281px;
-  // height: 454px;
-  // background: $white;
-  // border-radius: 10px;
-  // z-index: 5;
-  // outline: pink;
 
   &--off {
     display: none;
@@ -50,25 +39,21 @@
 
 .site-list__item {
 
-  &--current {
-
-    }
-
   &--current a {
     color: $color-sun;
     display: inline-block;
 
-        &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: 8px;
-        left: 30px;
-        width: calc(100% - 30px);
-        height: 2px;
-        background: $color-sun;
-        border-radius: 3px;
-      }
+      &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 8px;
+      left: 30px;
+      width: calc(100% - 30px);
+      height: 2px;
+      background: $color-sun;
+      border-radius: 3px;
+    }
   }
 }
 
@@ -108,8 +93,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    // margin-right: -306px;
-    // margin-bottom: 50px;
+
     &--off {
       display: none;
     }

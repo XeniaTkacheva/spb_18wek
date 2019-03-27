@@ -8,8 +8,6 @@
 
 .publications__list {
   display: block;
-  // justify-content: center;
-  // flex-wrap: wrap;
   margin: 0 auto 62px;
   padding-top: 12px;
 }
@@ -17,7 +15,6 @@
 .publications__item {
   display: block;
   box-sizing: border-box;
-  // flex-shrink: 0;
   max-width: 302px;
   min-height: 302px;
   padding: 15px;
@@ -82,7 +79,6 @@
       justify-content: center;
       flex-wrap: wrap;
     margin: 0 auto;
-    // display: block;
     box-sizing: border-box;
     max-width: 1440px;
   }
@@ -194,11 +190,6 @@
     &:nth-child(2n) {
   margin: 0 0 90px 30px;
   }
-
-  //   &:nth-child(3n),
-  //   &:nth-child(3n-1), {
-  //   margin-left: auto;
-  // }
 }
 
 .publications__link {

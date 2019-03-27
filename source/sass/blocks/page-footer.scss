@@ -11,7 +11,6 @@
   min-width: 320px;
   box-sizing: border-box;
   padding: 48px 0 50px 0;
-  // margin-bottom: 50px;
 }
 
 .page-footer__container {
@@ -58,7 +57,7 @@
 
   &:hover,
   &:focus {
-    color: $color-sun; //$color-sunlight;
+    color: $color-sun;
     border-color: $color-sun;
     background-color: rgba($grey, 0.2);
   }
@@ -72,8 +71,6 @@
   .page-footer {
     background-image: linear-gradient(to top, rgba($reddish-dark, 0.8), rgba($reddish-dark, 0.8)),
       url(../img/bg-footer-laptop@1x.jpg);
-    // background-size: 1097px 691px;
-    // background-size: 100% auto;
     background-position: 50% 50%;
   }
 
@@ -101,9 +98,7 @@
     cursor: pointer;
     padding: 10px 20px;
     font-size: 40px;
-
   }
-
 }
 
 @media (min-width: $laptop-width) {
@@ -117,7 +112,6 @@
     min-height: 341px;
     background-image: linear-gradient(to top, rgba($reddish-dark, 0.8), rgba($reddish-dark, 0.8)),
       url(../img/bg-footer-desktop@1x.jpg);
-    // background-size: 1097px 691px;
     background-size: auto 100%;
     background-position: 50% 50%;
   }
@@ -157,7 +151,5 @@
     justify-content: space-between;
     align-items: flex-end;
     margin: 0 154px 0 195px;
-
-    // outline:  1px solid pink;
   }
 }

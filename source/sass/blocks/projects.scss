@@ -21,7 +21,6 @@
   display: inline-block;
   width: 49px;
   height: 59px;
-  // padding: 0 0 8px 5px;
   margin: 0 44px 0 0;
 
   font-family: "Playfair Display", "Times New Roman", serif;
@@ -42,7 +41,6 @@
 .projects__about {
   margin: 0;
   padding: 5px 0 11px;
-  // font-style: italic;
   font-size: 14px;
   line-height: 18px;
 }
@@ -157,7 +155,6 @@
   .projects__wrapper {
     display: flex;
     justify-content: space-between;
-    // flex-direction: row-reverse;
     box-sizing: border-box;
     padding: 0 147px 12px;
   }
@@ -231,6 +228,5 @@
     width: 44px;
     padding-left: 0;
     align-self: flex-end;
-
   }
 }

@@ -43,14 +43,12 @@ body {
   line-height: 19px;
   font-weight: 400;
   color: $black;
-  // background-color: $grey-border; //$white;
 }
 
 * {
   &:focus {
     outline-offset: 2px;
-    outline-color: $grey; // rgba($grey, 0.8);
-    // box-shadow: 0 0 10px rgba($color-sun, 0.5);
+    outline-color: $grey;
   }
 }
 .visually-hidden {
@@ -115,7 +113,6 @@ img {
 
 @media (min-width: $tablet-width) {
   .container {
-    // outline: 1px solid red; /*временно*/
   }
 }
 
@@ -123,6 +120,5 @@ img {
   .container {
     max-width: 1170px;
     margin: 0 auto;
-    // outline: 1px solid yellow; /*временно*/
   }
 }

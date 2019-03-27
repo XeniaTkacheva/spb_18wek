@@ -3,7 +3,6 @@
   margin: 0;
   padding: 18px;
   box-sizing: border-box;
-  // width: 306px;
   border: 2px solid $color-sun;
   background: transparent;
 
@@ -18,11 +17,9 @@
 
   &:hover {
     color: $color-sun;
-    // background-color: $greyish-dark;
   }
 
   &:active {
     color: rgba($color-sun, 0.6);
-    // background-color: ($color-sunlight, 0.9);
   }
 }

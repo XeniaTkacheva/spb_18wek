@@ -33,10 +33,6 @@
 .publics__item {
   display: block;
   margin: 0 20px 50px;
-
-  // &:nth-child(1) {
-  //   display: block;
-  // }
 }
 
 .publics__image {
@@ -69,10 +65,6 @@
   .publics__item {
     display: block;
     flex-shrink: 0;
-
-    // &:nth-child(n+4) {
-    //   display: none;
-    // }
   }
 
   .publics__image {

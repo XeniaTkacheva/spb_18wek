@@ -8,17 +8,9 @@
 .calendar__list{
   box-sizing: border-box;
   display: block;
-  // display: flex;
-  // flex-wrap: wrap;
-
-  // max-width: 1146px;
   margin: 0 auto 42px;
   align-items: center;
   position: relative;
-  // padding: 16px 0 45px;
-
-  // outline: 1px solid red;
-
 }
 
   .calendar__item {
@@ -28,15 +20,6 @@
     &--current {
       display: block;
     }
-
-    // display: none;
-
-    // margin-right: 10px;
-    // // outline: 1px solid blue;
-
-    // &:last-child {
-    // margin-left: -5px;
-    // }
   }
 
   .calendar__link {
@@ -88,9 +71,7 @@
   }
     .calendar__item {
     display: block;
-
     margin-right: 10px;
-    // outline: 1px solid blue;
 
     &:last-child {
     margin-left: -5px;
@@ -115,8 +96,6 @@
     align-items: center;
     position: relative;
     padding: 16px 0 45px;
-
-    // outline: 1px solid red;
 
     &::before {
       content: "";
@@ -145,7 +124,6 @@
 
   .calendar__item {
     margin-right: 44px;
-    // outline: 1px solid blue;
 
     &:last-child {
     margin-left: -10px;
