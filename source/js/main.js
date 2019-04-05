@@ -9,13 +9,13 @@ var siteMenu = document.querySelector(".site-list");
 // Попап-меню на мобильных версиях
 
 var menuOn = document.querySelector(".site-list");
-var links = document.querySelectorAll(".site-list__link");
+var links = document.querySelectorAll(".site-list__item");
 
 btnOn.addEventListener('click', function(evt) {
   evt.preventDefault();
   menuOn.classList.toggle("site-list--js");
   for (i = 0; i < links.length; i++){
-  links[i].classList.toggle("site-list__link--js");
+  links[i].classList.toggle("site-list__item--js");
 }
   btnOn.classList.toggle("nav-toggle--close");
 });

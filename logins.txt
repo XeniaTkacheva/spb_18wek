@@ -1,7 +1,10 @@
 wp18.xenia-tkacheva.ru
 
-// База данных
+// База данных mysql-5.6
 vek18
+
+// DB_HOST
+localhost:3310, 95.216.42.58:3310
 
 // Пользователь
 spb_vek18 - H7z4X2j9

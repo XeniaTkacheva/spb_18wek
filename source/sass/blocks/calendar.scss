@@ -22,7 +22,8 @@
     }
   }
 
-  .calendar__link {
+  .calendar__link,
+  .calendar__item a {
     display: block;
     text-decoration: none;
     color: $color-sun;
@@ -31,14 +32,15 @@
     line-height: 28px;
     font-size: 24px;
     letter-spacing: 0.05em;
+  }
 
-    &--current {
+    .calendar__item--current a {
       text-align: center;
 
       line-height: 77px;
       font-size: 64px;
     }
-  }
+
 
 @media (min-width: $tablet-width) {
   .calendar__list{
@@ -130,7 +132,8 @@
     }
   }
 
-  .calendar__link {
+  .calendar__link,
+  .calendar__item a {
     display: block;
     text-decoration: none;
     color: $color-sun;
@@ -139,10 +142,19 @@
     line-height: 58px;
     font-size: 48px;
     letter-spacing: 0.05em;
+  }
 
-    &--current {
-      line-height: 77px;
-      font-size: 64px;
+  .calendar__item--current a,
+  .calendar__item.current-menu-item a {
+    line-height: 77px;
+    font-size: 64px;
+  }
+
+  .calendar__item.current-menu-item a,
+  .calendar__item.current-menu-item {
+
+    &::before {
+      display: none;
     }
   }
 }

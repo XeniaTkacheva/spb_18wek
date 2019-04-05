@@ -9,7 +9,8 @@
   }
 }
 
-.footer-list__link {
+.footer-list__link,
+.footer-list__item a {
   display: block;
   text-decoration: none;
   line-height: 34px;
@@ -45,10 +46,27 @@
     &:last-child {
       margin-top: 0;
     }
+
+    &--current a {
+      color: $color-sun;
+    }
   }
 
-  .footer-list__link {
+  .footer-list__link,
+  .footer-list__item a {
     padding: 5px;
     display: flex;
+  }
+
+
+  .current-menu-item a {
+    color: $color-sun;
+  }
+
+  .footer-list .current-menu-item,
+  .footer-list .current-menu-item a {
+    &::before {
+      display: none;
+    }
   }
 }

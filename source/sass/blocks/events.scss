@@ -33,8 +33,9 @@
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  flex-shrink: 0;
   margin: 0 auto 36px;
-  padding: 0 35px 25px;
+  padding: 0 10px 25px;
   width: 264px;
   height: 132px;
   border: 1px solid $color-sun;
@@ -70,11 +71,13 @@
   margin: 0 auto 40px 0;
 }
 
+.events__column p,
 .events__text {
   margin: 0 0 21px;
   line-height: 18px;
   font-size: 14px;
 }
+
   .events__column {
     margin-bottom: auto;
   }
@@ -85,6 +88,10 @@
   align-self: flex-start;
   text-decoration: none;
   color: $black;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
 
      &::after {
     content: "";
@@ -105,6 +112,7 @@
 
 .events__photo {
   max-width: 100%;
+  flex-shrink: 0;
   // height: 264px;
 }
 .events__image {
@@ -211,6 +219,8 @@
     min-height: 132px;
     max-height: 264px;
     border: 1px solid $color-sun;
+    padding: 0 35px 25px;
+
 
     font-family: "Playfair Display", "Times New Roman", serif;
     font-weight: 700;
@@ -238,6 +248,7 @@
     width: 364px;
   }
 
+  .events__column p,
   .events__text {
     margin: 0 0 21px;
     line-height: 18px;
