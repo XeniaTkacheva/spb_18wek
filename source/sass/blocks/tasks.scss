@@ -4,12 +4,15 @@
   max-width: 1440px;
   margin: 0 auto;
   display: block;
-  padding: 0 9px 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
 }
 
 .tasks__wrapper {
   display: block;
   box-sizing: border-box;
+  position: relative;
 }
 
 .tasks__picture {
@@ -23,15 +26,44 @@
   height: 137px;
 }
 
-.tasks__pagin {
-  display: none;
+.tasks__swiper-slide {
+  box-sizing: border-box;
+  padding: 0 35px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 65px;
+  flex-shrink: 0;
+  transition-property: transform;
 }
 
-.tasks__slider {
-  display: block;
+.tasks__pagin {
+  display: flex;
+  justify-content: space-between;
+
+  position: absolute;
+  left: calc(50% - 57px);
+  bottom: 35px;
   width: 114px;
   height: 10px;
-  margin: 25px auto 35px;
+  z-index: 20;
+}
+
+.tasks__toggle {
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: $grey;
+  &--current {
+    background-color: $color-sun;
+  }
+}
+
+.tasks__toggle span {
+  display: none;
 }
 
 .tasks__title {
@@ -61,25 +93,6 @@
   color: $color-sun;
 }
 
-.tasks__list {
-  display: flex;
-  width: 267px;
-}
-
-.tasks__item {
-  display: none;
-  box-sizing: border-box;
-  margin: 4px 0 7px 26px;
-  position: relative;
-  min-height: 185px;
-  width: 220px;
-  flex-shrink: 0;
-
-  &--current {
-    display: block;
-  }
-}
-
 .tasks__text {
   margin: 0;
   font-style: italic;
@@ -88,12 +101,8 @@
 
 
 @media (min-width: $tablet-width) {
-  .tasks__wrapper {
-    padding-left: 86px;
-  }
-
   .tasks__wrap {
-    padding: 0;
+    padding: 0 0 54px 86px;
   }
 
   .tasks__picture {
@@ -101,34 +110,45 @@
     margin: 0;
   }
 
+  .tasks__swiper-slide {
+    padding: 0 15px 0 0;
+  }
+
+  .task__toggle {
+    width: 12px;
+    height: 12px;
+  }
+
   .tasks__title {
+    padding-left: 86px;
+
     text-align: left;
     margin-bottom: 10px;
   }
 
-  .tasks__list {
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 38px;
-  }
-
   .tasks__item {
     display: block;
-    margin: 0 26px 0 0;
   }
 
   .tasks__number {
     padding: 0 0 12px 0;
   }
 
-  .tasks__slider {
-    margin: 25px auto 55px;
-    padding-right: 87px;
+  .tasks__pagin {
+    left: calc(50% - 35px);
+    bottom: 50px;
+    width: 70px;
+    height: 12px;
+  }
+
+  .tasks__text {
+    font-size: 15px;
+    line-height: 19px;
   }
 }
 
 @media (min-width: $laptop-width) {
-  .tasks__wrapper {
+  .tasks__wrap {
     padding-left: 106px;
   }
 
@@ -136,23 +156,14 @@
     margin-bottom: 34px;
   }
 
-  .tasks__list {
-    margin-bottom: 60px;
-  }
-
-  .tasks__item {
-    margin: 0 112px 0 0;
-  }
-
   .tasks__text {
     line-height: 18px;
     font-size: 14px;
   }
 
-  .tasks__slider {
-    margin: 25px auto 50px;
-    padding-right: 105px;
-    width: 70px;
+  .task__toggle {
+    width: 12px;
+    height: 12px;
   }
 }
 
@@ -166,7 +177,6 @@
   }
 
   .tasks__wrapper {
-    padding-left: 30px;
     width: 309px;
     min-height: 305px;
   }
@@ -182,17 +192,20 @@
     height: 197px;
   }
 
-  .tasks__slider {
-    display: none;
-  }
-
   .tasks__pagin {
     display: block;
-    margin-right: 16px;
+    position: static;
+    margin: 0;
+    height: auto;
+    width: auto;
+    padding: 0;
+    margin-right: 30px;
+    align-self: flex-start;
   }
 
-  .tasks__toggles {
-    display: block;
+  .tasks__swiper-slide {
+    margin-bottom: 10px;
+    padding: 65px 0 0 35px;
   }
 
   .tasks__toggle {
@@ -203,6 +216,9 @@
     padding: 2px;
     padding-bottom: 7px;
     box-sizing: border-box;
+    width: 36px;
+    height: 50px;
+    background-color: transparent;
 
     font-family: "Playfair Display", "Times New Roman", serif;
     font-weight: 700;
@@ -211,6 +227,7 @@
     letter-spacing: 0.05em;
     color: $color-sun;
     margin-bottom: 10px;
+    border-radius: 0;
 
     &:focus,
     &:hover {
@@ -234,27 +251,17 @@
     }
   }
 
+  .tasks__toggle span {
+    display: inline;
+  }
+
   .tasks__number {
     display: none;
   }
 
   .tasks__title {
-    padding: 10px 0;
-    margin-bottom: 55px;
-  }
-
-  .tasks__list {
-    margin-bottom: 0;
-  }
-
-  .tasks__item {
-    width: 267px;
-    display: none;
-    margin: 0;
-
-    &--current {
-      display: block;
-    }
+    padding: 10px 0 0 30px;
+    margin-bottom: 14px;
   }
 
   .tasks__text {

@@ -12,3 +12,9 @@ spb_vek18 - H7z4X2j9
 // Администратор логин WP и FTP клиент для сайта wp18.xenia-tkacheva.ru/
 admin_vek18 - SpbVek18+
 
+https://wp18.xenia-tkacheva.ru/wp-content/uploads/2019/04/consent-form.pdf
+
+Данные хостинга:
+https://www.jino.ru/
+логин: j849113
+пароль: shcuVW25f
