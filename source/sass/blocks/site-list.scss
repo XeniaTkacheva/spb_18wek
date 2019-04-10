@@ -87,6 +87,12 @@
     }
   }
 
+.calendar .current-menu-item a {
+
+  &::before {
+    display: none;
+  }
+}
 
 
 

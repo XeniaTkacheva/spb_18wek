@@ -6,6 +6,52 @@ var siteMenu = document.querySelector(".site-list");
   siteMenu.classList.remove("site-list--on");
   siteMenu.classList.add("site-list--off");
 
+
+
+if (window.innerWidth < 767) {
+  var eventDateCurrent = document.querySelector(".events__date");
+  eventDateCurrent.classList.add("events__date--current");
+
+  var eventsPhotoOff = document.querySelectorAll(".events__photo");
+  var eventsOff = document.querySelectorAll(".events__about");
+  for (i = 1; i < eventsOff.length; i++){
+    eventsPhotoOff[i].classList.add("events__photo--off");
+    eventsOff[i].classList.add("events__about--off");
+  }
+
+  var eventDateCurrent = document.querySelectorAll(".events__date");
+  var eventCurrent = document.querySelectorAll(".events__about");
+  var eventPhotoCurrent = document.querySelectorAll(".events__photo");
+
+  for (i = 0; i < eventDateCurrent.length; i++){
+    eventDateCurrent[i].addEventListener('click', function(evt) {
+    evt.preventDefault();
+     if (this.classList.contains("events__date--current") == false) {
+      for (j = 0; j < eventDateCurrent.length; j++){
+        eventCurrent[j].classList.add("events__about--off");
+        eventPhotoCurrent[j].classList.add("events__photo--off");
+        eventDateCurrent[j].classList.remove("events__date--current");
+      }
+        this.classList.add("events__date--current");
+
+        aboutOn = this.nextElementSibling;
+        aboutOn.classList.remove("events__about--off");
+
+        photoOn = aboutOn.nextElementSibling;
+        photoOn.classList.remove("events__photo--off");
+      } else {
+        this.classList.toggle("events__date--current");
+
+        aboutOn = this.nextElementSibling;
+        aboutOn.classList.toggle("events__about--off");
+
+        photoOn = aboutOn.nextElementSibling;
+        photoOn.classList.toggle("events__photo--off");
+      }
+    });
+  }
+}
+
 // Попап-меню на мобильных версиях
 
 var menuOn = document.querySelector(".site-list");
@@ -19,57 +65,6 @@ btnOn.addEventListener('click', function(evt) {
 }
   btnOn.classList.toggle("nav-toggle--close");
 });
-
-
-// Список задач на главной
-
-// function openTask(evt, cityName) {
-//   // Declare all variables
-//   var i, tabcontent, tablinks;
-
-//   // Get all elements with class="tabcontent" and hide them
-//   tabcontent = document.querySelectorAll(".tasks__item");
-
-//   // tabcontent = document.getElementsByClassName("tasks__item");
-//   for (i = 0; i < tabcontent.length; i++) {
-//     tabcontent[i].style.display = "none";
-//   }
-
-//   // Get all elements with class="tablinks" and remove the class "active"
-//   tablinks = document.getElementsByClassName("tasks__toggle");
-//   for (i = 0; i < tablinks.length; i++) {
-//     tablinks[i].className = tablinks[i].className.replace(" tasks__toggle--current", "");
-//   }
-
-//   // Show the current tab, and add an "active" class to the link that opened the tab
-//   document.getElementById(cityName).style.display = "block";
-//   evt.currentTarget.className += " tasks__toggle--current";
-// }
-
-// function openTask1(evt, cityName) {
-//   if (event.keyCode == 13) {
-//     // Declare all variables
-//     var i, tabcontent, tablinks;
-
-//     // Get all elements with class="tabcontent" and hide them
-//     tabcontent = document.querySelectorAll(".tasks__item");
-
-//     // tabcontent = document.getElementsByClassName("tasks__item");
-//     for (i = 0; i < tabcontent.length; i++) {
-//       tabcontent[i].style.display = "none";
-//     }
-
-//     // Get all elements with class="tablinks" and remove the class "active"
-//     tablinks = document.getElementsByClassName("tasks__toggle");
-//     for (i = 0; i < tablinks.length; i++) {
-//       tablinks[i].className = tablinks[i].className.replace(" tasks__toggle--current", "");
-//     }
-
-//     // Show the current tab, and add an "active" class to the link that opened the tab
-//     document.getElementById(cityName).style.display = "block";
-//     evt.currentTarget.className += " tasks__toggle--current";
-//   }
-// }
 
 // Кнопка "Наверх"
 
@@ -89,86 +84,84 @@ function topFunction() {
 }
 
 
+// Swiper "Основные задачи" на главной
+if (document.querySelector(".tasks__swiper-container")) {
+ var taskSwiper = new Swiper ('.tasks__swiper-container', {
 
-// Swiper
- var taskSwiper = new Swiper ('.swiper-container', {
     // Optional parameters
-    slideClass: 'tasks__swiper-slide',
-    slideActiveClass: 'tasks__swiper-slide-active',
-    slideDuplicateActiveClass: 'tasks__swiper-slide-duplicate-active',
-    slideVisibleClass: 'tasks__swiper-slide-visible',
-    slideDuplicateClass: 'tasks__swiper-slide-duplicate',
-    slideNextClass: 'tasks__swiper-slide-next',
-    slideDuplicateNextClass: 'tasks__swiper-slide-duplicate-next',
-    slidePrevClass: 'tasks__swiper-slide-prev',
-    slideDuplicatePrevClass: 'tasks__swiper-slide-duplicate-prev',
-      keyboard: {
-        enabled: true,
-      },
-    // wrapperClass: 'task__swiper-wrapper',
-    // containerModifierClass:
-          slidesPerView: 'auto',
-      centeredSlides: false, //true,
-      spaceBetween: 0,
-    speed: 400,
+  slideClass: 'tasks__swiper-slide',
+  slideActiveClass: 'tasks__swiper-slide-active',
+  slideDuplicateActiveClass: 'tasks__swiper-slide-duplicate-active',
+  slideVisibleClass: 'tasks__swiper-slide-visible',
+  slideDuplicateClass: 'tasks__swiper-slide-duplicate',
+  slideNextClass: 'tasks__swiper-slide-next',
+  slideDuplicateNextClass: 'tasks__swiper-slide-duplicate-next',
+  slidePrevClass: 'tasks__swiper-slide-prev',
+  slideDuplicatePrevClass: 'tasks__swiper-slide-duplicate-prev',
+  keyboard: {
+    enabled: true,
+  },
+  containerModifierClass: '.tasks__swiper-container-',
+  wrapperClass: 'tasks__swiper-wrapper',
 
-    // direction: 'vertical',
-    direction: 'horizontal',
-    // loop: true,
+  slidesPerView: 'auto',
+  centeredSlides: false, //true,
+  spaceBetween: 0,
+  speed: 400,
+
+// direction: 'vertical',
+  direction: 'horizontal',
+// loop: true,
 
     // If we need pagination
-    pagination: {
-      // el: '.swiper-pagination',
-      el: '.tasks__pagin',
-      bulletClass: 'tasks__toggle',
-      bulletActiveClass: 'tasks__toggle--current',
-      clickableClass: 'tasks__toggle--clickable',
-
-
-              // bulletElement: 'li';
-              renderBullet: function (index, className) {
-    return '<div class="' + 'tasks__toggle' + '"><span>' + (index + 1) + '.</span></div>';
-  },
+pagination: {
+  // el: '.swiper-pagination',
+  el: '.tasks__pagin',
+  bulletClass: 'tasks__toggle',
+  bulletActiveClass: 'tasks__toggle--current',
+  clickableClass: 'tasks__toggle--clickable',
   clickable: true,
-    },
-      breakpoints: {
-        1170: {
-          slidesPerView: 3,
-          // spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 3,
-          // spaceBetween: 40,
-        },
-        768: {
-          slidesPerView: 3,
-          // spaceBetween: 30,
-        },
-        640: {
-          slidesPerView: 1,
-          // spaceBetween: 20,
-        },
-        320: {
-          slidesPerView: 1,
-          // spaceBetween: 10,
-        }
-      },
 
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+// bulletElement: 'li';
+    renderBullet: function (index, className) {
+      return '<div class="' + 'tasks__toggle' + '"><span>' + (index + 1) + '.</span></div>';
     },
 
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      // spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1170: {
+      slidesPerView: 3,
+    },
+  },
+
+// Navigation arrows
+// navigation: {
+//   nextEl: '.tasks__swiper-button-next',
+//   prevEl: '.tasks__swiper-button-prev',
+// },
+
+// And if we need scrollbar
+// scrollbar: {
+//   el: '.swiper-scrollbar',
+// },
   })
 
 
-var taskSwiper = document.querySelector('.swiper-container').swiper
-
+var taskSwiper = document.querySelector('.tasks__swiper-container').swiper
+// console.log(taskSwiper.slides[0]);
 // Now you can use all slider methods like
-taskSwiper.slideNext();
-
+// taskSwiper.slideNext();
+}

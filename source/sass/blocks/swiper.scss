@@ -2,18 +2,20 @@
 
 }
 
-  .swiper-container {
-    position: relative;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    width: 100%;
-    height: 100%;
-      // box-sizing: border-box;
-    // background-color: yellow;
-    // outline: 1px solid red;
-    z-index: 1;
+.swiper-container {
+  position: relative;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: 100%;
+  height: 100%;
+    // box-sizing: border-box;
+  // background-color: yellow;
+  // outline: 1px solid red;
+  z-index: 1;
 }
+
+
 
 .swiper-wrapper {
   box-sizing: border-box;
