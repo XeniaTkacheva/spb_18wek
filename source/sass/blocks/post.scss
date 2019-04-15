@@ -1,7 +1,7 @@
 .post__wrapper {
   max-width: 1146px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding: 0 9px 50px;
 }
 
 .post__wrapper h1 {
@@ -23,3 +23,20 @@
   font-weight: 700;
 }
 
+@media (min-width: $tablet-width) {
+  .post__wrapper {
+    width: 723px;
+  }
+}
+
+@media (min-width: $laptop-width) {
+  .post__wrapper {
+    width: 980px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .post__wrapper {
+    width: auto;
+  }
+}

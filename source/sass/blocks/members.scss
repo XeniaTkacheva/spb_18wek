@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  align-items: center;
 }
 
 .members__photo,
@@ -97,6 +98,7 @@
   .members__profile {
     margin-left: -72px;
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .members__photo,

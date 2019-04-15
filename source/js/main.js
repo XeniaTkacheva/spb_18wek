@@ -1,70 +1,79 @@
-var btnOn = document.querySelector(".nav-toggle");
-  btnOn.classList.remove("nav-toggle--off");
-  btnOn.classList.add("nav-toggle--on");
+if (window.innerWidth < 767) {
+  // Показываем кнопку Бургер
+  var btnOn = document.querySelector(".nav-toggle");
+    btnOn.classList.remove("nav-toggle--off");
+    btnOn.classList.add("nav-toggle--on");
 
-var siteMenu = document.querySelector(".site-list");
-  siteMenu.classList.remove("site-list--on");
-  siteMenu.classList.add("site-list--off");
+  // Cкрываем меню на мобильном
+
+  var siteMenu = document.querySelector(".site-list");
+    siteMenu.classList.remove("site-list--on");
+    siteMenu.classList.add("site-list--off");
+
+  // Попап-меню на мобильных версиях
+
+  var menuOn = document.querySelector(".site-list");
+  var links = document.querySelectorAll(".site-list__item");
+
+  btnOn.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    menuOn.classList.toggle("site-list--js");
+    for (i = 0; i < links.length; i++){
+    links[i].classList.toggle("site-list__item--js");
+  }
+    btnOn.classList.toggle("nav-toggle--close");
+  });
+}
 
 
 
 if (window.innerWidth < 767) {
-  var eventDateCurrent = document.querySelector(".events__date");
-  eventDateCurrent.classList.add("events__date--current");
+    if (document.querySelector(".events__date")){
+      var eventDateCurrent = document.querySelector(".events__date");
+      eventDateCurrent.classList.add("events__date--current");
 
-  var eventsPhotoOff = document.querySelectorAll(".events__photo");
-  var eventsOff = document.querySelectorAll(".events__about");
-  for (i = 1; i < eventsOff.length; i++){
-    eventsPhotoOff[i].classList.add("events__photo--off");
-    eventsOff[i].classList.add("events__about--off");
-  }
-
-  var eventDateCurrent = document.querySelectorAll(".events__date");
-  var eventCurrent = document.querySelectorAll(".events__about");
-  var eventPhotoCurrent = document.querySelectorAll(".events__photo");
-
-  for (i = 0; i < eventDateCurrent.length; i++){
-    eventDateCurrent[i].addEventListener('click', function(evt) {
-    evt.preventDefault();
-     if (this.classList.contains("events__date--current") == false) {
-      for (j = 0; j < eventDateCurrent.length; j++){
-        eventCurrent[j].classList.add("events__about--off");
-        eventPhotoCurrent[j].classList.add("events__photo--off");
-        eventDateCurrent[j].classList.remove("events__date--current");
+      var eventsPhotoOff = document.querySelectorAll(".events__photo");
+      var eventsOff = document.querySelectorAll(".events__about");
+      for (i = 1; i < eventsOff.length; i++){
+        eventsPhotoOff[i].classList.add("events__photo--off");
+        eventsOff[i].classList.add("events__about--off");
       }
-        this.classList.add("events__date--current");
 
-        aboutOn = this.nextElementSibling;
-        aboutOn.classList.remove("events__about--off");
+      var eventDatesCurrent = document.querySelectorAll(".events__date");
+      var eventCurrent = document.querySelectorAll(".events__about");
+      var eventPhotoCurrent = document.querySelectorAll(".events__photo");
 
-        photoOn = aboutOn.nextElementSibling;
-        photoOn.classList.remove("events__photo--off");
-      } else {
-        this.classList.toggle("events__date--current");
+      for (i = 0; i < eventDatesCurrent.length; i++){
+        eventDatesCurrent[i].addEventListener('click', function(evt) {
+        evt.preventDefault();
+         if (this.classList.contains("events__date--current") == false) {
+          for (j = 0; j < eventDateCurrent.length; j++){
+            eventCurrent[j].classList.add("events__about--off");
+            eventPhotoCurrent[j].classList.add("events__photo--off");
+            eventDatesCurrent[j].classList.remove("events__date--current");
+          }
+            this.classList.add("events__date--current");
 
-        aboutOn = this.nextElementSibling;
-        aboutOn.classList.toggle("events__about--off");
+            var aboutOn = this.nextElementSibling;
+            aboutOn.classList.remove("events__about--off");
 
-        photoOn = aboutOn.nextElementSibling;
-        photoOn.classList.toggle("events__photo--off");
+            var photoOn = aboutOn.nextElementSibling;
+            photoOn.classList.remove("events__photo--off");
+          } else {
+            this.classList.toggle("events__date--current");
+
+            aboutOn = this.nextElementSibling;
+            aboutOn.classList.toggle("events__about--off");
+
+            photoOn = aboutOn.nextElementSibling;
+            photoOn.classList.toggle("events__photo--off");
+          }
+        });
       }
-    });
-  }
+    }
 }
 
-// Попап-меню на мобильных версиях
 
-var menuOn = document.querySelector(".site-list");
-var links = document.querySelectorAll(".site-list__item");
-
-btnOn.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  menuOn.classList.toggle("site-list--js");
-  for (i = 0; i < links.length; i++){
-  links[i].classList.toggle("site-list__item--js");
-}
-  btnOn.classList.toggle("nav-toggle--close");
-});
 
 // Кнопка "Наверх"
 
@@ -164,4 +173,55 @@ var taskSwiper = document.querySelector('.tasks__swiper-container').swiper
 // console.log(taskSwiper.slides[0]);
 // Now you can use all slider methods like
 // taskSwiper.slideNext();
+}
+
+
+// Активируем слайдер Календарь на странице События
+if(document.querySelector(".calendar__list")) {
+var calendarMenu = document.querySelector(".calendar__list");
+  calendarMenu.classList.add("calendar__list--js");
+var calendarNav = document.querySelectorAll(".calendar__nav");
+  for (i = 0; i < calendarNav.length; i++){
+    calendarNav[i].classList.add("calendar__nav--js");
+  }
+
+  // Swiper "Календарь" на странице событий
+  if (document.querySelector(".calendar__box")) {
+   var calendarSwiper = new Swiper('.calendar__box', {
+
+      // Optional parameters
+    slideClass: 'calendar__item',
+    slideActiveClass: 'calendar__item-active',
+    slideDuplicateActiveClass: 'calendar__item-duplicate-active',
+    slideVisibleClass: 'calendar__item-visible',
+    slideDuplicateClass: 'calendar__item-duplicate',
+    slideNextClass: 'calendar__item-next',
+    slideDuplicateNextClass: 'calendar__item-duplicate-next',
+    slidePrevClass: 'calendar__item-prev',
+    slideDuplicatePrevClass: 'calendar__item-duplicate-prev',
+    keyboard: {
+      enabled: true,
+    },
+    containerModifierClass: '.calendar__box-',
+    wrapperClass: 'calendar__list',
+
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    freeMode: true,
+    spaceBetween: 0,
+    speed: 400,
+
+  // direction: 'vertical',
+    direction: 'horizontal',
+
+  // Navigation arrows
+    navigation: {
+      nextEl: '.calendar__nav--next',
+      prevEl: '.calendar__nav--prev',
+      disabledClass: '.calendar__nav--disabled',
+      hiddenClass: '.calendar__nav--disabled',
+    },
+
+    })
+  }
 }

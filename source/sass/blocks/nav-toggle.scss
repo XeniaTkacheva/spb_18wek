@@ -8,7 +8,7 @@
   border: none;
   background: transparent;
 
-  z-index: 10;
+  z-index: 999;
 
   &:focus {
     outline-color: transparent;
@@ -28,52 +28,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .nav-toggle {
-    left: 35px;
-
-    &--off {
-      display: none;
-    }
-
-    &--on {
-      display: block;
-      background-image: url(../img/icon-menu.svg);
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-    }
-
-    &--close {
-      background-image: url(../img/icon-close.svg);
-    }
-  }
-}
-
-@media (min-width: $laptop-width) {
-  .nav-toggle {
-    left: 40px;
-    top: 35px;
-    width: 70px;
-    height: 70px;
-
-    &--off {
-      display: none;
-    }
-
-    &--on {
-      display: block;
-      background-image: url(../img/icon-menu.svg);
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 35px auto;
-    }
-
-    &--close {
-      background-image: url(../img/icon-close.svg);
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
   .nav-toggle {
     display: none;
   }

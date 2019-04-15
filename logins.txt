@@ -12,9 +12,45 @@ spb_vek18 - H7z4X2j9
 // Администратор логин WP и FTP клиент для сайта wp18.xenia-tkacheva.ru/
 admin_vek18 - SpbVek18+
 
+
 https://wp18.xenia-tkacheva.ru/wp-content/uploads/2019/04/consent-form.pdf
 
-Данные хостинга:
+// Данные хостинга:
 https://www.jino.ru/
+
+https://account.jino.ru/
 логин: j849113
 пароль: shcuVW25f
+
+// Боевая База
+// Имя БД:
+j849113_vek18
+
+// Пользователь БД доп.
+// Логин:
+046845463_wp-adm
+// Пароль:
+SpbVek18+
+
+//FTP аккаунт с доступом к папке
+// Хост
+18vek.spb.ru
+// Логин
+j849113_v18
+// Пароль
+SpbVek18+
+
+// Администратор логин WordPress
+// Админ
+
+admin_vek18
+// Пароль
+SpbVek18+
+
+
+https://18vek.spb.ru/wp-admin
+// User 1 : libra81@inbox.ru
+// Логин
+user1-vek18
+// Пароль
+Vek18$+useR$9
