@@ -225,3 +225,62 @@ var calendarNav = document.querySelectorAll(".calendar__nav");
     })
   }
 }
+
+// Активируем слайдер Традиции на главной странице
+if(document.querySelector(".history")) {
+  var historyText = document.querySelector(".history__btn");
+    historyText.classList.add("history__btn--off");
+  var historyBox = document.querySelector(".history__box");
+    historyBox.classList.add("history__box--js");
+
+//   // Swiper "Традиции" на главной странице
+  if (document.querySelector(".history__box")) {
+   var historySwiper = new Swiper('.history__box', {
+
+      // Optional parameters
+    slideClass: 'history__slide',
+    slideActiveClass: 'history__slide-active',
+    slideDuplicateActiveClass: 'history__slide-duplicate-active',
+    slideVisibleClass: 'history__slide-visible',
+    slideDuplicateClass: 'history__slide-duplicate',
+    slideNextClass: 'history__slide-next',
+    slideDuplicateNextClass: 'history__slide-duplicate-next',
+    slidePrevClass: 'history__slide-prev',
+    slideDuplicatePrevClass: 'history__slide-duplicate-prev',
+    keyboard: {
+      enabled: true,
+    },
+    containerModifierClass: '.history__box-',
+    wrapperClass: 'history__list',
+
+      direction: 'vertical',
+      slidesPerView: 'auto',
+      freeMode: true,
+      mousewheel: true,
+      grabCursor: true,
+
+      scrollbar: {
+        el: '.history__scrollbar',
+        lockClass: 'history__scrollbar-lock',
+        dragClass: 'history__scrollbar-drag',
+        hide: false,
+        draggable: true,
+      },
+
+
+    spaceBetween: 0,
+    speed: 400,
+
+//   // Navigation arrows
+//     navigation: {
+//       nextEl: '.calendar__nav--next',
+//       prevEl: '.calendar__nav--prev',
+//       disabledClass: '.calendar__nav--disabled',
+//       hiddenClass: '.calendar__nav--disabled',
+//     },
+
+//     })
+//   }
+});
+};
+}
