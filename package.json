@@ -5,8 +5,8 @@
   "description": "XeniaTkacheva: Проект «XVIII век»",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "9.4.x",
-    "browser-sync": "2.26.x",
+    "autoprefixer": "^9.4.10",
+    "browser-sync": "^2.26.5",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-csso": "^3.0.1",
@@ -19,7 +19,7 @@
     "gulp-webp": "^3.0.0",
     "run-sequence": "^2.2.1",
     "stylelint": "9.9.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "^0.1.3"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

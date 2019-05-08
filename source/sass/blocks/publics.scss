@@ -40,12 +40,15 @@
 }
 
 .publics__slider {
-  display: block;
+  display: none;
   box-sizing: border-box;
   width: 88px;
   height: 10px;
   padding-top: 5px;
   margin: 25px auto 35px;
+}
+.publics__slider.slider {
+  display: none;
 }
 .publics__btn {
   padding: 23px 30px;

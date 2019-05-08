@@ -5,6 +5,9 @@
   padding: 0 28px;
   max-width: 1440px;
 }
+.members__item {
+  margin-bottom: 60px;
+}
 
 .members__profile {
   box-sizing: border-box;
@@ -73,6 +76,7 @@
 }
 
 .members__slider {
+  display: none;
   box-sizing: border-box;
   width: 36px;
   height: 10px;
