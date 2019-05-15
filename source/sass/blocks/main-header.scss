@@ -33,6 +33,10 @@
   padding: 25px;
 }
 
+.main-header__logo0 {
+  display: none;
+}
+
 .main-header__logo1 {
   display: block;
   box-sizing: border-box;
@@ -293,8 +297,16 @@
     padding-left: 16%;
     justify-content: space-between;
   }
+  .main-header__logo0 {
+    display: block;
+    width: 75px;
+    height: 78px;
+    margin-top: -12px;
+    padding-left: 12px;
+  }
 
   .main-header__logo1 {
+    display: none;
     margin: 0;
     font-size: 18px;
     line-height: 24px;
